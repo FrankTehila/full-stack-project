@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Services
+namespace BL.services
 {
     public class EmployeeServiceBL : IEmployeeServiceBL
     {
