@@ -1,36 +1,67 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const LogIn = () => {
+    
+    const dispatch = useDispatch();
+    const userKind = useSelector((state) => state.proxy.userKind);
+
     const [id, setId] = useState('');
-    const [isTeamLeader, setIsTeamLeader] = useState(null); // ישמור את התוצאה של הבדיקה
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e) => {
+    const validateId = (id) => {
+        const idRegex = /^[0-9]{1,9}$/; // numbers: 0-9, 9 digits
+        return idRegex.test(id);
+    };
+
+    const handleLogin = async (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post('/api/login', { id: parseInt(id) });
+        setLoading(true);
+        setErrorMessage('');
 
-            // טיפול בתשובה של true/false
-            setIsTeamLeader(response.data);
+        if (!validateId(id)) {
+            setLoading(false);
+            setErrorMessage('invalid ID');
+            return;
+        }
+
+        try {
+            const response = await axios.post('/api/LogIn', parseInt(id));
+            dispatch(setUserKind(response.data.userKind)); 
+            setLoading(false);
+            navigate('/');
         } catch (error) {
-            console.error("שגיאת התחברות:", error);
+            setLoading(false);
+            console.error('connect error:', error);
+            setErrorMessage(error.response?.data?.message || 'connect error, try again.');
         }
     };
 
-    const handlePasswordLogin = async (e) => {
+    const handleLoginTeamLeader = async (e) => {
         e.preventDefault();
-        console.log("כניסת צוות עם סיסמה");
-        // הוספת הלוגיקה פה
-    };
+        setLoading(true);
+        setErrorMessage('');
+        if (password == teamLeader) {
+            navigate('/');
+        }
+        else {
+            setLoading(false);
+            setErrorMessage("The password is not correct!!");
+        }
+    }
 
     return (
         <>
-            {isTeamLeader === null ? (
-                <form onSubmit={handleSubmit}>
+            <div>
+                <h2>connecting</h2>
+                <form onSubmit={handleLogin}>
                     <div>
                         <label>
-                            תעודת זהות:
+                            insert ID to connect:
                             <input
                                 type="text"
                                 value={id}
@@ -39,14 +70,16 @@ const LogIn = () => {
                             />
                         </label>
                     </div>
-                    <button type="submit">התחבר</button>
                 </form>
-            ) : (
-                isTeamLeader ? (
-                    <form onSubmit={handlePasswordLogin}>
+                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+            </div>
+
+            {userKind != null && (
+                <div>
+                    <form onSubmit={handleLoginTeamLeader}>
                         <div>
                             <label>
-                                סיסמה:
+                                password:
                                 <input
                                     type="password"
                                     value={password}
@@ -55,16 +88,15 @@ const LogIn = () => {
                                 />
                             </label>
                         </div>
-                        <button type="submit">התחבר כראש צוות</button>
+                        <button type="submit" disabled={loading}>
+                            {loading ? 'loading...' : 'connected'}
+                        </button>
                     </form>
-                ) : (
-                    <div>
-                        <h2>כניסתך כעובד רגיל התקבלה!</h2>
-                    </div>
-                )
+                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                </div>
             )}
         </>
-    );
-};
+    )
+}
 
 export default LogIn;
