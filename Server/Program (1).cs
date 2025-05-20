@@ -14,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IMeetingServiceBL, MeetingServiceBL>();
 builder.Services.AddSingleton<IMeetingBL, MeetingBL>();
+builder.Services.AddSingleton<IEmployeeServiceBL, EmployeeServiceBL>();
+
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.                                                                                                                                                                                                                                                                                                                                                                                                                                         
