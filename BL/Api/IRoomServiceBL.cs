@@ -1,4 +1,6 @@
-﻿using DAL.models;
+﻿using BL.Models;
+using DAL.api;
+using DAL.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,9 @@ namespace BL.api
 {
     public interface IRoomServiceBL
     {
-        public IRoomBL GetRoom(int roomId);
-    }
+        public Room GetRoomByID(int roomId);
+        public bool AddRoom(IRoomBL room);
+        public bool RemoveRoom(int roomID);
+       
+}
 }
