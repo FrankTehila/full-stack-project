@@ -1,4 +1,5 @@
 ﻿using DAL.models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace DAL.api
 {
     public interface IRoomService
     {
-        public Room getRoom(int roomId);
+        public bool AddRoom(IRoom room);
+        public bool RemoveRoom(int roomID);
+        public Room GetRoomByID(int roomId);
     }
 }

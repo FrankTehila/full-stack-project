@@ -20,11 +20,9 @@ namespace BL.services
         {
             _roomDAL = roomDAL;
         }
-        public IRoomBL GetRoom(int roomId)
+        public Room GetRoomByID(int roomId)
         {
-            DAL.models.Room roomDAL = _roomDAL.getRoom(roomId);
-            return MapToRoomBL(roomDAL);
-
+            return _roomDAL.GetRoomByID(roomId);
         }
         private IRoomBL MapToRoomBL(DAL.models.Room roomDAL)
         {
@@ -38,48 +36,30 @@ namespace BL.services
                 Meetings = roomDAL.Meetings
             };
         }
+        private Room MapToRoomDAL(IRoomBL roomBL)
+        {
+            return new Room()
+            {
+                Id = roomBL.Id,
+                NumOfSeats = roomBL.NumOfSeats,
+                NumOfComputers = roomBL.NumOfComputers,
+                IsProjector = roomBL.IsProjector,
+                IsBoard = roomBL.IsBoard,
+                Meetings = roomBL.Meetings
+            };
+        }
+        public bool AddRoom(IRoomBL room)
+        {
+            Room roomDAL = MapToRoomDAL(room);
+            return _roomDAL.AddRoom(roomDAL);
+        }
 
+        public bool RemoveRoom(int roomID)
+        {
+            return _roomDAL.RemoveRoom(roomID);
+        }
+
+       
     }
-    //using DAL.models;
-    //using System;
-    //using System.Collections.Generic;
-    //using DAL.api;
-    //using BL.api;
-
-    //namespace BL.services
-    //{
-    //    public class RoomServiceBL : IRoomServiceBL
-    //    {
-    //        private readonly IRoomService _roomDAL;
-
-    //        public RoomServiceBL(IRoomService roomDAL)
-    //        {
-    //            _roomDAL = roomDAL ?? throw new ArgumentNullException(nameof(roomDAL));
-    //        }
-
-    //        public IRoomBL GetRoom(int roomId)
-    //        {
-    //            var roomDAL = _roomDAL.getRoom(roomId); // Ensure the method name matches the interface
-    //            if (roomDAL == null)
-    //            {
-    //                throw new KeyNotFoundException($"Room with ID {roomId} was not found.");
-    //            }
-
-    //            // Assuming a mapping from DAL.models.Room to BL.api.IRoomBL
-    //            return MapToRoomBL(roomDAL);
-    //        }
-
-    //        public IRoomBL getRoom(int roomId)
-    //        {
-    //            throw new NotImplementedException();
-    //        }
-
-    //        private IRoomBL MapToRoomBL(DAL.models.Room roomDAL)
-    //        {
-    //            // Implement the mapping logic here
-    //            // Example: return new RoomBL { Id = roomDAL.Id, Name = roomDAL.Name };
-    //            throw new NotImplementedException();
-    //        }
-    //    }
-    //}
+  
 }
