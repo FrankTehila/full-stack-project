@@ -9,6 +9,6 @@ namespace DAL.api
     public interface IEmployeeService
     {
         public bool IsItTeamLeader(int ID);
-        public string GetEmailByID(int ID);
+        //public string GetEmailByID(int ID);
     }
 }

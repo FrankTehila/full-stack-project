@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yqUjKKlGSYTfySmoexbiGjxjBed8+PbnwPXJwfRFGsmGUyCsuwV3Q4GbZD+DbyCOu42tBOwvA58UWxOrmUKZ3g==",
+  "dgSpecHash": "rRdIXEOl/zKXyr4YtvcFfEP7madMH6fgy400ER+7wB5AKe1gLJXSOKkMoXItFZj9Q+ebsh+3t6VyQWEyA84MAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\This User\\Desktop\\הפרויקט סופי\\full-stack-project\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\This User\\Desktop\\הפרויקט סופי\\גיבוי\\full-stack-project\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\This User\\.nuget\\packages\\abp\\8.4.0\\abp.8.4.0.nupkg.sha512",
     "C:\\Users\\This User\\.nuget\\packages\\abp.automapper\\8.4.0\\abp.automapper.8.4.0.nupkg.sha512",

@@ -20,10 +20,10 @@ namespace Server.Controllers
         [HttpGet]
         public IActionResult GetRoom(int roomId)
         {
-            
+             
             if (_IRoomBL.GetRoomByID(roomId)!=null)
             {
-                return Ok();
+                return Ok(_IRoomBL.GetRoomByID(roomId));
             }
             return BadRequest();
         }
@@ -32,6 +32,15 @@ namespace Server.Controllers
         {       
             _IRoomBL.AddRoom(room); 
             return Ok(); 
+        }
+        [HttpDelete]
+        public IActionResult DeleteRoom(int roomId) 
+        {
+            if (_IRoomBL.RemoveRoom(roomId))
+            {
+                return Ok($"Room No. {roomId} was successfully deleted.");
+            }
+            return BadRequest($"Room No. {roomId} was not found.");
         }
     }
 }

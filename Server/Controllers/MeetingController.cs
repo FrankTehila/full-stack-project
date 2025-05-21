@@ -20,22 +20,18 @@ namespace Server.Controllers
         }
 
         [HttpPost("Add")]
-        public IActionResult AddMeeting([FromBody] JsonElement json)
+        public IActionResult AddMeeting(MeetingBL meetingBL)
         {
-            var meeting = JsonSerializer.Deserialize<MeetingBL>(json.GetRawText());
-            meeting.Id = id++;
+            meetingBL.Id = id++;
 
-            if (!TryValidateModel(meeting))
+            
+            if (meetingServiceBL.AddMeeting(meetingBL))
             {
-                return BadRequest("Some data is missing or inconsistent.");
-            }
-            if (meetingServiceBL.AddMeeting(meeting))
-            {
-                return Ok($"Meeting {meeting.Id} added successfully!!");
+                return Ok($"Meeting {meetingBL.Id} added successfully!!");
             }
             else
             {
-                return BadRequest($"Meeting {meeting.Id} was not added.");
+                return BadRequest($"Meeting {meetingBL.Id} was not added.");
             }
         }
 
