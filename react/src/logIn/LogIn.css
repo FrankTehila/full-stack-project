@@ -1,0 +1,27 @@
+body {
+    background-color: #343a40; /* אפור כהה */
+    color: #000; /* טקסט שחור */
+    margin: 0; /* מסיר רווחים סביב הדף */
+    padding: 0; /* מסיר רווחים סביב הדף */
+    height: 100vh; /* גובה הדף */
+    display: flex; /* מאפשר מיקום מרכזי */
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+}
+
+.card {
+    background-color: #ffffff; /* צבע רקע לבן */
+    border: 2px solid #ced4da; /* מסגרת אפורה */
+    border-radius: 5px; /* פינות מעוגלות (אופציונלי) */
+    padding: 20px; /* רווח פנימי */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* צל (אופציונלי) */
+}
+
+h2{
+    background: linear-gradient(to right, rgb(254, 33, 33),  blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Arial', sans-serif; /* Change the font to a more stylish one */
+    font-size: 2rem; /* Adjust the font size as needed */
+}

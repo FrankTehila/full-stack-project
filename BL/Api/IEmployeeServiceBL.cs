@@ -8,7 +8,7 @@ namespace BL.api
 {
     public interface IEmployeeServiceBL
     {
-        public bool IsItTeamLeader(int ID);
-        public string GetEmailByID(int ID);
+        public int IsItTeamLeader(int ID);
+        //public string GetEmailByID(int ID);
     }
 }

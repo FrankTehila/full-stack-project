@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUserKind } from '../store/proxy';
+import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './LogIn.css'; // הוסף קובץ CSS מותאם אישית
 
 const LogIn = () => {
-    
     const dispatch = useDispatch();
     const userKind = useSelector((state) => state.proxy.userKind);
+    const navigate = useNavigate();
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
@@ -25,19 +28,19 @@ const LogIn = () => {
 
         if (!validateId(id)) {
             setLoading(false);
-            setErrorMessage('invalid ID');
+            setErrorMessage('Invalid ID');
             return;
         }
 
         try {
-            const response = await axios.post('/api/LogIn', parseInt(id));
-            dispatch(setUserKind(response.data.userKind)); 
+            const response = await axios.post('/api/Login', { id: parseInt(id) });
+            dispatch(setUserKind(response.data.userKind));
             setLoading(false);
             navigate('/');
         } catch (error) {
             setLoading(false);
-            console.error('connect error:', error);
-            setErrorMessage(error.response?.data?.message || 'connect error, try again.');
+            console.error('Connect error:', error);
+            setErrorMessage(error.response?.data?.message || 'Connect error, try again.');
         }
     };
 
@@ -45,58 +48,56 @@ const LogIn = () => {
         e.preventDefault();
         setLoading(true);
         setErrorMessage('');
-        if (password == teamLeader) {
+        if (password === userKind) {
             navigate('/');
-        }
-        else {
+        } else {
             setLoading(false);
             setErrorMessage("The password is not correct!!");
         }
-    }
+    };
 
     return (
-        <>
-            <div>
-                <h2>connecting</h2>
+        <div className="container d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#343a40' }}>
+            <div className="card p-4 shadow" style={{ width: '400px' }}>
+                <h2 className="text-center mb-4">Log-In</h2>
                 <form onSubmit={handleLogin}>
-                    <div>
-                        <label>
-                            insert ID to connect:
+                    <div className="mb-3">
+                        <label className="form-label">Insert ID to connect:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            value={id}
+                            onChange={(e) => setId(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary w-100" disabled={loading}>
+                        {loading ? 'Loading...' : 'Connect'}
+                    </button>
+                </form>
+                {errorMessage && <p className="text-danger">{errorMessage}</p>}
+
+                {userKind !== 0 && (
+                    <form onSubmit={handleLoginTeamLeader} className="mt-4">
+                        <div className="mb-3">
+                            <label className="form-label">Password:</label>
                             <input
-                                type="text"
-                                value={id}
-                                onChange={(e) => setId(e.target.value)}
+                                type="password"
+                                className="form-control"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
-                        </label>
-                    </div>
-                </form>
-                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-            </div>
-
-            {userKind != null && (
-                <div>
-                    <form onSubmit={handleLoginTeamLeader}>
-                        <div>
-                            <label>
-                                password:
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                />
-                            </label>
                         </div>
-                        <button type="submit" disabled={loading}>
-                            {loading ? 'loading...' : 'connected'}
+                        <button type="submit" className="btn btn-primary w-100" disabled={loading}>
+                            {loading ? 'Loading...' : 'Connect'}
                         </button>
                     </form>
-                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                </div>
-            )}
-        </>
-    )
+                )}
+            </div>
+        </div>
+    );
+
 }
 
 export default LogIn;
