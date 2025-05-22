@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Controllers
 {
+
+    [Route("api/[controller]")]
+    [ApiController]
     public class WorkerController : Controller
     {
         private readonly IEmployeeServiceBL _employeeServiceBL;

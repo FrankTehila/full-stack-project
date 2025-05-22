@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Services
 {
-    public class TeamLeaderService
+    public class TeamLeaderService: ITeamLeaderService
     {
         private readonly dbClass _context;
         public TeamLeaderService(dbClass context)

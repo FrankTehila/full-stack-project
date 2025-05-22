@@ -1,10 +1,10 @@
-﻿using DAL.Api;
+﻿using DAL.api;
 using System;
 using System.Collections.Generic;
 
 namespace DAL.models;
 
-public partial class Employee:IWorker
+public partial class Employee:IEmployee
 {
     public int Id { get; set; }
 

@@ -1,9 +1,11 @@
 ﻿using BL.api;
 using DAL.api;
-using DAL.Api;
+
 using DAL.models;
+using DAL.Models;
 using DAL.services;
 using DAL.Services;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +16,14 @@ namespace BL.services
 {
     public class EmployeeServiceBL : IEmployeeServiceBL
     {
-        EmployeeService employeeService;
-        EmailService emailService;
-        TeamLeaderService teamLeaderService;
-        public EmployeeServiceBL(EmployeeService employeeService, EmailService emailService,TeamLeaderService teamLeaderService)
+
+        IEmployeeService employeeService;
+        //EmailService emailService;
+        ITeamLeaderService teamLeaderService;
+        public EmployeeServiceBL(IEmployeeService employeeService,ITeamLeaderService teamLeaderService)
         {
             this.employeeService = employeeService;
-            this.emailService = emailService;
+            //this.emailService = emailService;
             this.teamLeaderService = teamLeaderService;
         }
 
@@ -37,11 +40,12 @@ namespace BL.services
                 //string subject = "Your code to enter the system";
                 //string body = $"Your code is: {randomCode}"; 
 
-               //emailService.SendRandomCodeEmail(recipientEmail, subject, body); 
+
                 return randomCode;
             }
             return 0;
         }
+
         public bool AddWorker(IWorkerBL worker)
         {
             if(worker is IEmployee)
@@ -77,6 +81,8 @@ namespace BL.services
             }
             return employeeService.GetEmployeeByID(workerID);
         }
+
+
         //public string GetEmailByID(int ID)
         //{
         //    return employeeService.GetEmailByID(ID);

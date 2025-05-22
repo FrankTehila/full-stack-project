@@ -1,4 +1,4 @@
-export const fetchProducts = async () => {
+/*export const fetchProducts = async () => {
     return new Promise((resolve) => {
         async () => {
             const response = await axios.post('http://localhost:5036/api/Meeting');
@@ -28,4 +28,4 @@ resolve([]);
 
 });
 
-};
+};*/

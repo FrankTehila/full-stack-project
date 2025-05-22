@@ -1,8 +1,5 @@
-﻿using BL.api;
+﻿
 using DAL.api;
-using DAL.Api;
-using DAL.services;
-using DAL.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +13,12 @@ namespace BL.api
         public int IsItTeamLeader(int ID);
         //public string GetEmailByID(int ID);
 
+
         public bool AddWorker(IWorkerBL worker);
 
         public bool RemoveWorker(int workerID);
 
         public IWorker GetWorkerByID(int workerID);
-        
+
     }
 }

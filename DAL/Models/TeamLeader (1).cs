@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using DAL.Api;
+using DAL.api;
 using DAL.models;
 
 namespace DAL.Models;
 
-public partial class TeamLeader:IWorker
+public partial class TeamLeader:ITeamLeader
 {
     public int Id { get; set; }
 
