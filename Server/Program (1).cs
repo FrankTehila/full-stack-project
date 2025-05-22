@@ -21,7 +21,7 @@ builder.Services.AddScoped<IMeetingServiceBL, MeetingServiceBL>(); // רישום שירו
 builder.Services.AddScoped<IMeetingBL, MeetingBL>();
 builder.Services.AddScoped<IRoomServiceBL, RoomServiceBL>();
 builder.Services.AddScoped<IRoomService, RoomService>();
-builder.Services.AddScoped<ITeamLeaderService, TeamLeaderService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

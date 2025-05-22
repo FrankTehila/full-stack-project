@@ -1,0 +1,20 @@
+.vs/
+*.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+
+node_modules/
+npm-debug.log
+build/
+
+
+# קבצי סביבה
+.env
+
+# קבצים זמניים
+*.tmp
+*.log

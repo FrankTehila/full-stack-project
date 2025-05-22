@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserKind } from '../store/proxy';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './LogIn.css'; // הוסף קובץ CSS מותאם אישית
+import './LogIn.css';
+import Navigation from '../navigation/Navigation';
 
 const LogIn = () => {
     const dispatch = useDispatch();
@@ -15,9 +16,10 @@ const LogIn = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const validateId = (id) => {
-        const idRegex = /^[0-9]{1,9}$/; // numbers: 0-9, 9 digits
+        const idRegex = /^[0-9]{1,9}$/;
         return idRegex.test(id);
     };
 
@@ -36,7 +38,7 @@ const LogIn = () => {
             const response = await axios.post('/api/Login', { id: parseInt(id) });
             dispatch(setUserKind(response.data.userKind));
             setLoading(false);
-            navigate('/');
+            setIsLoggedIn(true);
         } catch (error) {
             setLoading(false);
             console.error('Connect error:', error);
@@ -55,6 +57,10 @@ const LogIn = () => {
             setErrorMessage("The password is not correct!!");
         }
     };
+
+    if (isLoggedIn) {
+        return <Navigation />;
+    }
 
     return (
         <div className="container d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#343a40' }}>
@@ -95,9 +101,9 @@ const LogIn = () => {
                     </form>
                 )}
             </div>
+            <button onClick={(e) => setIsLoggedIn(true)}></button>
         </div>
     );
-
 }
 
 export default LogIn;

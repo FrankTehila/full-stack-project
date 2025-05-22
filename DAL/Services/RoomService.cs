@@ -43,12 +43,12 @@ namespace DAL.Services
         public bool RemoveRoom(int roomID)
         {
             Room roomInDB = _context.Rooms.FirstOrDefault(r => r.Id == roomID);
-            if (roomInDB == null)
+            if (roomInDB != null)
             {
-                throw new Exception("The room does not exist");
+                throw new Exception("The room does not exist"); // שגיאה אם החדר לא קיים
             }
             _context.Rooms.Remove(roomInDB);
-            _context.SaveChanges();
+            _context.SaveChanges(); // הוסף כאן את השמירה
             return true;
         }
 

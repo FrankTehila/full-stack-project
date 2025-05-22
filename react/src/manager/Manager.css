@@ -1,0 +1,21 @@
+/* Manager.css */
+.manager-container {
+    background-color: #333; /* אפור כהה */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.manager-button {
+    background-color: #5500ff; /* כחול זורח */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.manager-button:hover {
+    background-color: #FF1493; /* ורוד זורח */
+}
