@@ -1,9 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
 .logo {
   height: 50px; /* הגובה של התמונה */
@@ -36,7 +30,7 @@
 }
 
 nav {
-    background-color: #282c34;
+    background-color: #2a2e34;
     padding: 30px;
     width: 100%;
     position: fixed;
@@ -46,14 +40,15 @@ nav {
 }
 
 nav ul {
-  font-size: 20px;
+    font-size: 20px;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex; /* שימוש ב-flexbox */
+    justify-content: center; /* מרכז את הכפתורים */
 }
 
 nav ul li {
-    display: inline;
     margin-right: 40px; /* הוסף רווח בין הכפתורים */
 }
 

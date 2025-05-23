@@ -101,7 +101,11 @@ const LogIn = () => {
                     </form>
                 )}
             </div>
-            <button onClick={(e) => setIsLoggedIn(true)}></button>
+<button 
+    onClick={(e) => setIsLoggedIn(true)} 
+    style={{ backgroundColor: '#343a40', color: 'transparent', border: 'none', height: '50px'}} 
+    aria-hidden="true" // כדי להסתיר את הכפתור מסך הקוראים
+></button>
         </div>
     );
 }
