@@ -18,6 +18,7 @@ builder.Services.AddDbContext<dbClass>(options =>
 builder.Services.AddScoped<IMeetingService, MeetingService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 
+
 var app = builder.Build();
 
 // קוד לקונפיגורציה של האפליקציה

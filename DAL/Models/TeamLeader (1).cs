@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using DAL.api;
+using DAL.Api;
+using DAL.models;
 
-namespace DAL.models;
+namespace DAL.Models;
 
-public partial class TeamLeader
+public partial class TeamLeader:ITeamLeader
 {
     public int Id { get; set; }
 

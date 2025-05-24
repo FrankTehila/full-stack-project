@@ -1,0 +1,41 @@
+.gradient-text {
+    background: linear-gradient(to right, rgb(255, 44, 44),  blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Arial', sans-serif; /* Change the font to a more stylish one */
+    font-size: 2rem; /* Adjust the font size as needed */
+}
+
+.circle-button {
+    position: fixed; /* מיקום קבוע */
+    right: 40px; /* 4 ס"מ מימין (40 פיקסלים) */
+    bottom: 40px; /* 4 ס"מ מלמטה (40 פיקסלים) */
+    width: 55px; /* קוטר הכפתור */
+    height: 55px; /* קוטר הכפתור */
+    background-color: #f0f0f0; /* צבע רקע בהיר */
+    border-radius: 50%; /* עיגול */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.circle-button:hover {
+    background-color: #e0e0e0; /* שינוי צבע בעת ריחוף */
+}
+
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #000; /* צבע החץ, עכשיו פונה לצד ימין */
+    position: absolute; /* מיקום אבסולוטי */
+    left: 53%; /* מיקום במרכז */
+    top: 50%; /* מיקום במרכז */
+    transform: translate(-50%, -50%); /* ממרכז את החץ */
+}
