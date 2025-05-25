@@ -8,24 +8,24 @@
 //     });
 // };
 
-// export const fetchProducts = async () => {
+export const fetchProducts = async () => {
 
-// return new Promise(async (resolve) => {
+return new Promise(async (resolve) => {
 
-// try {
+try {
 
-// const response = await axios.post('http://localhost:5036/api/Meeting');
+const response = await axios.post('http://localhost:5036/api/Meeting');
 
-// resolve(response.data.products);
+resolve(response.data.products);
 
-// } catch (error) {
+} catch (error) {
 
-// console.error('Error fetching products:', error);
+console.error('Error fetching products:', error);
 
-// resolve([]);
+resolve([]);
 
-// }
+}
 
-// });
+});
 
-// };
+};

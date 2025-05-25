@@ -19,7 +19,13 @@ namespace DAL.services
         }
         public bool IsItTeamLeader(int ID)
         {
-            int teamLeaderID = _context.TeamLeaders.FirstOrDefault(tl => tl.Id == ID).Id;
+            var teamLeader = _context.TeamLeaders.FirstOrDefault(tl => tl.Id == ID);
+            if (teamLeader == null)
+            {
+                return false; // או זריקת שגיאה אם זה חיוני
+            }
+
+            int teamLeaderID = teamLeader.Id;
             if (teamLeaderID == null)
             {
                 teamLeaderID = _context.Employees.FirstOrDefault(tl => tl.Id == ID).Id;

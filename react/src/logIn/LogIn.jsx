@@ -35,7 +35,7 @@ const LogIn = () => {
         }
 
         try {
-            const response = await axios.post('/api/Login', { id: parseInt(id) });
+            const response = await axios.post('https://localhost:7065/api/Login', { Id: parseInt(id) });
             dispatch(setUserKind(response.data.userKind));
             setLoading(false);
             setIsLoggedIn(true);
