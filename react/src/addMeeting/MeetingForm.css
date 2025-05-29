@@ -52,3 +52,7 @@
 .form-control {
     text-align: center; /* מרכז את הטקסט בתוך שדה הקלט */
 }
+
+h1 {
+    color: white; /* צבע לבן */
+}

@@ -17,7 +17,7 @@ const LogIn = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [simpleWorkerEnter, setSimpleWorkerEnter] = useState(false);
+   // const [simpleWorkerEnter, setSimpleWorkerEnter] = useState(false);
 
     const validateId = (id) => {
         const idRegex = /^[0-9]{1,9}$/;
@@ -39,8 +39,9 @@ const LogIn = () => {
             const response = await axios.post('https://localhost:7065/api/Login', { Id: parseInt(id) });
             dispatch(setUserKind(response.data));
             setLoading(false);
-            if (response.data === 0) setSimpleWorkerEnter(true);
-            setIsLoggedIn(response.data === 0);
+            if (response.data === 0)
+                setIsLoggedIn(response.data === 0);
+            else setErrorMessage("A password has been sent by email to log in as a team leader.")
         } catch (error) {
             setLoading(false);
             if (!error.response) {
@@ -57,7 +58,7 @@ const LogIn = () => {
     };
 
     const handleRegularEnter = () => {
-        setSimpleWorkerEnter(true);
+        dispatch(setUserKind(0));
         setIsLoggedIn(true); // הכנס את המשתמש כעובד פשוט
     };
 
@@ -65,8 +66,8 @@ const LogIn = () => {
         e.preventDefault();
         setLoading(true);
         setErrorMessage('');
-        if (password === userKind) {
-            navigate('/');
+        if (password == userKind) {
+            setIsLoggedIn(true);
         } else {
             setLoading(false);
             setErrorMessage("The password is not correct!!");

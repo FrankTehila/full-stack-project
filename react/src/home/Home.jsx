@@ -1,9 +1,11 @@
 import './Home.css'
+import Manager from'../manager/Manager'
 
 const Home = () => {
     return (
         <>
             <br /><br /><br />
+        <Manager></Manager>
             <div className="home-container">
                 <h2>Welcome to TEAMWORK</h2>
                 <h1>the advanced system for managing team meetings</h1>
