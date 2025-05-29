@@ -1,46 +1,87 @@
 import React from 'react';
 import './Manager.css'; // קובץ CSS לעיצוב
+import { useState } from 'react';
+import AddWorker from './AddWorker';
+import AddRoom from './AddRoom';
+import UpdateWorker from "./UpdateWorker";
+import DeleteWorker from './DeleteWorker'; 
+import UpdateRoom from './UpdateRoom';
+
 
 const Manager = () => {
-    const handleAddEmployee = () => {
-        // לוגיקה להוספת עובד
-    };
+    const [showAddWorker, setShowAddWorker] = useState(false);
+    const [showAddRoom, setShowAddRoom] = useState(false);
+    const [showUpdateWorker, setShowUpdareWorker] = useState(false);
+    const [showDeleteWorker, setShowDeleteWorker] = useState(false);
+    const [showUpdateRoom, setShowUpdateRoom] = useState(false);
 
-    const handleDeleteEmployee = () => {
-        // לוגיקה למחיקת עובד
-    };
-
-    const handleUpdateEmployee = () => {
-        // לוגיקה לעדכון פרטי עובד
-    };
-
-    const handleAddRoom = () => {
-        // לוגיקה להוספת חדר
-    };
-
-    const handleDeleteRoom = () => {
-        // לוגיקה למחיקת חדר
-    };
-
-    const handleUpdateRoom = () => {
-        // לוגיקה לעדכון פרטי חדר
+    const resetAll = () => {
+        setShowAddWorker(false);
+        setShowAddRoom(false);
+        setShowUpdareWorker(false);
+        setShowDeleteWorker(false);
+        setShowUpdateRoom(false);
     };
 
     return (
         <div className="manager-container">
-            <button className="manager-button" onClick={handleAddEmployee}>הוסף עובד</button>
-            <br />
-            <button className="manager-button" onClick={handleDeleteEmployee}>מחק עובד</button>
-            <br />
-            <button className="manager-button" onClick={handleUpdateEmployee}>עדכן פרטי עובד</button>
-            <br />
-            <button className="manager-button" onClick={handleAddRoom}>הוסף חדר</button>
-            <br />
-            <button className="manager-button" onClick={handleDeleteRoom}>מחק חדר</button>
-            <br />
-            <button className="manager-button" onClick={handleUpdateRoom}>עדכן פרטי חדר</button>
+            {/* <h3 className="manager-title">ניהול עובדים וחדרים</h3> */}
+            {showAddWorker && <AddWorker />}
+            {showAddRoom && <AddRoom />}
+            {showUpdateWorker && <UpdateWorker />}
+            {showDeleteWorker && <DeleteWorker />}
+            {showUpdateRoom && <UpdateRoom />}
+            
+
+            <button
+                className="manager-button"
+                onClick={() => {
+                    resetAll();
+                    setShowAddWorker(true);
+                }}
+            >
+                הוספת עובד
+            </button>
+
+            <button
+                className="manager-button"
+                onClick={() => {
+                    resetAll();
+                    setShowDeleteWorker(true);
+                }}>מחק עובד</button>
+
+            <button
+                className="manager-button"
+                onClick={() => {
+                    resetAll();
+                    setShowUpdareWorker(true);
+                }}
+            >
+                עדכון פרטי עובד
+            </button>
+
+            <button
+                className="manager-button"
+                onClick={() => {
+                    resetAll();
+                    setShowAddRoom(true);
+                }}
+            >
+                הוספת חדר
+            </button>
+
+            <button
+                className="manager-button"
+                onClick={() => {
+                    resetAll();
+                    setShowUpdateRoom(true);
+            }}
+            >עדכן פרטי חדר
+            </button>
+            
+           
         </div>
     );
-};
 
+};
 export default Manager;

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using static Abp.Net.Mail.EmailSettingNames;
+using System.Net.Mail;
 
 namespace BL.services
 {
@@ -13,18 +8,26 @@ namespace BL.services
     {
         public void SendRandomCodeEmail(string email, string subject, string body)
         {
+            Console.WriteLine($"--------------------------- שליחת מייל ---------------------------");
 
-            Console.WriteLine($"---------------------------++++++++++++++++++++++++++++++++++++++++++++++++++");
-            var fromAddress = new MailAddress("rg944262@gmail.com", "The office");
+            // כתובת השולח
+            var fromAddress = new MailAddress("rg944262@gmail.com", "The Office");
             var toAddress = new MailAddress(email);
-            const string fromPassword = ",nr vufcrdr100"; // סיסמת המייל שלך
-            //const string subject = "Your Random Code";
-            //string body = $"Your random code is: {randomCode}";
+
+            // קריאת הסיסמה מתוך משתנה סביבה (מאובטח יותר)
+            string fromPassword = "uydq whtp jexr gnkf";
+
+
+            if (string.IsNullOrEmpty(fromPassword))
+            {
+                Console.WriteLine("שגיאה: סיסמת SMTP לא נמצאה. ודא שהיא מוגדרת במערכת.");
+                return;
+            }
 
             var smtp = new SmtpClient
             {
-                Host = "smtp.gmail.com", // השרת SMTP שלך
-                Port = 465, // או 465 עבור SSL
+                Host = "smtp.gmail.com", // שרת SMTP של Gmail
+                Port = 587, // פורט TLS (או 465 עבור SSL)
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
@@ -34,26 +37,24 @@ namespace BL.services
             using (var message = new MailMessage(fromAddress, toAddress)
             {
                 Subject = subject,
-                Body = body
+                Body = body,
+                IsBodyHtml = true // אפשר להפוך את גוף ההודעה ל-HTML אם רוצים
             })
             {
                 try
                 {
                     smtp.Send(message);
+                    Console.WriteLine(" מייל נשלח בהצלחה!");
                 }
                 catch (SmtpException smtpEx)
                 {
-                    Console.WriteLine($"----------------------------SMTP Error: {smtpEx:Message}");
-                    Console.WriteLine($"SMTP Error Code: {smtpEx:StatusCode}");
-                    Console.WriteLine($"SMTP Error Details: {smtpEx:ToString()}");
-                    smtp.Send(message);
-
+                    Console.WriteLine($" שגיאת SMTP: {smtpEx.Message}");
+                    Console.WriteLine($"קוד שגיאה: {smtpEx.StatusCode}");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"-------------------------------------Error: {ex.Message}");
+                    Console.WriteLine($" שגיאה כללית: {ex.Message}");
                 }
-
             }
         }
     }

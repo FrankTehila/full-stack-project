@@ -33,11 +33,11 @@ namespace BL.services
                     /// יצירת מספר רנדומלי בן 6 ספרות
                     Random random = new Random();
                     int randomCode = random.Next(100000, 999999);
-                    //string recipientEmail = GetEmailByID(ID);
-                    //string subject = "Your code to enter the system";
-                    //string body = $"Your code is: {randomCode}";
+                    string recipientEmail = GetEmailByID(ID);
+                    string subject = "Your code to enter the system";
+                    string body = $"Your code is: {randomCode}";
 
-                    //emailService.SendRandomCodeEmail(recipientEmail, subject, body);
+                    emailService.SendRandomCodeEmail(recipientEmail, subject, body);
                     return randomCode;
                 }
                 return 0;
