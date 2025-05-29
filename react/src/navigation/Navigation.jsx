@@ -1,4 +1,3 @@
-import AddMeeting from '../addMeeting/AddMeeting';
 import ViewingMeetings from '../meetingManagement/ViewingMeetings';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from '../home/Home';

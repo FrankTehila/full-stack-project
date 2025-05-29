@@ -1,6 +1,6 @@
 ﻿using BL.api;
 
-namespace BL.Models
+namespace BL.models
 {
     public class EmployeeBL:IEmployeeBL
     {

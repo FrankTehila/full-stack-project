@@ -1,0 +1,30 @@
+.home-container {
+    max-width: 1000px; /* הגבלת רוחב */
+    margin: 0 auto; /* מרכז את התוכן */
+    padding: 20px;
+}
+
+.home-container h1 {
+    color: #ffffff; /* צבע כותרת בהיר */
+    font-size: 24px; /* גודל כותרת */
+}
+
+.home-container p {
+    color: #e0e0e0; /* צבע טקסט בהיר */
+    line-height: 1.6; /* רווח בין שורות */
+    margin-bottom: 15px; /* רווח בין פסקאות */
+    font-family: 'Arial', sans-serif; /* גופן קליל */
+}
+
+h2{
+    background: linear-gradient(to right, rgb(255, 44, 44),  blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Arial', sans-serif; /* Change the font to a more stylish one */
+    font-size: 2rem; /* Adjust the font size as needed */
+}
+
+h2{
+    color: white;
+}

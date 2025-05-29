@@ -1,7 +1,7 @@
 ﻿using DAL.api;
 using Microsoft.AspNetCore.Mvc;
 using BL.api;
-using BL.Models;
+using BL.models;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using DAL.models;
 using Microsoft.EntityFrameworkCore;

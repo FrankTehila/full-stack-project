@@ -23,9 +23,7 @@ namespace BL.services
 
             var smtp = new SmtpClient
             {
-
-               
-                Host = "smtp-relay.gmail.com", // השרת SMTP שלך
+                Host = "smtp.gmail.com", // השרת SMTP שלך
                 Port = 465, // או 465 עבור SSL
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,

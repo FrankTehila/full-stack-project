@@ -29,10 +29,15 @@ const Manager = () => {
     return (
         <div className="manager-container">
             <button className="manager-button" onClick={handleAddEmployee}>הוסף עובד</button>
+            <br />
             <button className="manager-button" onClick={handleDeleteEmployee}>מחק עובד</button>
+            <br />
             <button className="manager-button" onClick={handleUpdateEmployee}>עדכן פרטי עובד</button>
+            <br />
             <button className="manager-button" onClick={handleAddRoom}>הוסף חדר</button>
+            <br />
             <button className="manager-button" onClick={handleDeleteRoom}>מחק חדר</button>
+            <br />
             <button className="manager-button" onClick={handleUpdateRoom}>עדכן פרטי חדר</button>
         </div>
     );

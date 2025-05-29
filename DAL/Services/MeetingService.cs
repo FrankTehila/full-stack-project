@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DAL.services.MeetingService;
+using Abp.Configuration;
 
 namespace DAL.services
 {
@@ -15,31 +17,41 @@ namespace DAL.services
         public MeetingService(dbClass context)
         {
             _context = context;
+        }
 
-        }
-        public bool AddMeeting(Meeting meeting)
+        public List<Room> GetRoomsByParameters(bool isBoard, bool isProjector)
         {
-            Meeting m = _context.Meetings.FirstOrDefault(me => me.Id == meeting.Id);
-            if (m != null)
-            {
-                throw new Exception("The meeting already exixt");
-            }
-            TimeOnly endTime = meeting.StartTime.Add(TimeSpan.FromHours((double)meeting.Duration));
-            m = _context.Meetings.FirstOrDefault(me =>
-                me.RoomId == meeting.RoomId &&
-                me.Date.Date == meeting.Date.Date &&
-                me.StartTime < endTime &&
-                me.StartTime.Add(TimeSpan.FromHours((double)me.Duration)) > meeting.StartTime);
-            if (m != null)
-            {
-                throw new Exception("There is a meeting at this time and place");
-            }
-            //בדיקת תקינות שעה בהתאם לשעות פעילות המשרד שכתוב בקובץ ההגדרות (APPSETTING)
-            //if()
-                _context.Meetings.Add(meeting);
-                _context.SaveChanges();
-                return true;
+            return _context.Rooms
+                   .Where(r => r.IsBoard == isBoard && r.IsProjector == isProjector)
+                   .ToList();
         }
+
+        public int GetNumOfWorkersByTeamLeaderId(int Id)
+        {
+            return _context.Employees
+                .Where(e => e.LeaderId == Id)
+                .Count();
+        }
+
+        public bool IsFreeAtTime(Room room, DateTime date, TimeOnly time, decimal duration)
+        {
+            TimeOnly endTime = time.AddHours((double)duration);
+            Meeting m = _context.Meetings.FirstOrDefault(me =>
+                me.Date.Date == date.Date &&
+                me.StartTime < endTime &&
+                me.StartTime.AddHours((double)me.Duration) > time);
+
+            return m == null; // מחזיר true אם אין פגישה, אחרת false
+        }
+
+
+        public bool AddMeeting(IMeeting meeting)
+        {
+            _context.Meetings.Add((Meeting)meeting);
+            _context.SaveChanges();
+            return true;
+        }
+
 
         public bool RemoveMeeting(int meetingId)
         {

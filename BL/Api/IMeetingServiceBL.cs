@@ -8,8 +8,7 @@ namespace BL.api
 {
     public interface IMeetingServiceBL
     {
-        public bool ScheduleMeeting(string id, DateTime start, DateTime end);
-        public bool AddMeeting(IMeetingBL meeting);
+        public int AddMeeting(IMeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId);
         public bool RemoveMeeting(int meetingId);
     }
 }

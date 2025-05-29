@@ -7,6 +7,15 @@
     font-size: 2rem; /* Adjust the font size as needed */
 }
 
+.container {
+    height: 100vh; /* הגדר את גובה הקונטיינר לגובה המסך */
+}
+
+.card {
+    max-height: 90vh; /* הגבל את הגובה המרבי של הכרטיס */
+    overflow-y: auto; /* אפשר גלילה רק אם יש תוכן נוסף */
+}
+
 .circle-button {
     position: fixed; /* מיקום קבוע */
     right: 40px; /* 4 ס"מ מימין (40 פיקסלים) */
@@ -38,4 +47,8 @@
     left: 53%; /* מיקום במרכז */
     top: 50%; /* מיקום במרכז */
     transform: translate(-50%, -50%); /* ממרכז את החץ */
+}
+
+.form-control {
+    text-align: center; /* מרכז את הטקסט בתוך שדה הקלט */
 }

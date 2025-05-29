@@ -1,5 +1,4 @@
 ﻿using DAL.api;
-using DAL.Api;
 using DAL.models;
 using System;
 using System.Collections.Generic;
@@ -20,24 +19,17 @@ namespace DAL.services
         public bool IsItTeamLeader(int ID)
         {
             var teamLeader = _context.TeamLeaders.FirstOrDefault(tl => tl.Id == ID);
-            if (teamLeader == null)
+            if (teamLeader != null)
             {
-                return false; // או זריקת שגיאה אם זה חיוני
+                return true;
             }
 
-            int teamLeaderID = teamLeader.Id;
-            if (teamLeaderID == null)
+            Employee employee = _context.Employees.FirstOrDefault(tl => tl.Id == ID);
+            if (employee == null)
             {
-                teamLeaderID = _context.Employees.FirstOrDefault(tl => tl.Id == ID).Id;
-                if (teamLeaderID == null)
-                {
-                    throw new Exception("Employee does not exist");
-                }
-                return false;
+                throw new Exception("Employee does not exist");
             }
-           
-            
-            return true;
+            return false;
         }
 
         public bool AddEmployee(IEmployee employee)
@@ -80,25 +72,26 @@ namespace DAL.services
                 throw new Exception("The employee does not exist");
             }
             return employeeInDB;
-
         }
 
 
+        public string GetEmailByID(int ID)
+        {
+            string email;
+            if (IsItTeamLeader(ID))
+            {
+                email = _context.TeamLeaders.FirstOrDefault(tm => tm.Id == ID).Email;
 
-
-        //public string GetEmailByID(int ID)
-        //{
-        //    string email;
-        //    if (IsItTeamLeader(ID))
-        //    {
-        //        email = _context.TeamLeaders.FirstOrDefault(tm => tm.Id == ID).Email;
-        //    }
-        //    email = _context.Employees.FirstOrDefault(tm => tm.Id == ID).Email;
-        //    if (email == null)
-        //    {
-        //        throw new Exception("Employee does not exist");
-        //    }
-        //    return email;
-        //}
+            }
+            else
+            {
+                email = _context.Employees.FirstOrDefault(tm => tm.Id == ID).Email;
+            }
+            if (email == null)
+            {
+                throw new Exception("Employee does not exist");
+            }
+            return email;
+        }
     }
 }

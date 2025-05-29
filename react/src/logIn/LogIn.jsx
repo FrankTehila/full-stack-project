@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserKind } from '../store/proxy';
-import { useNavigate, BrowserRouter as Router } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LogIn.css';
 import Navigation from '../navigation/Navigation';
@@ -17,6 +17,7 @@ const LogIn = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [simpleWorkerEnter, setSimpleWorkerEnter] = useState(false);
 
     const validateId = (id) => {
         const idRegex = /^[0-9]{1,9}$/;
@@ -36,14 +37,28 @@ const LogIn = () => {
 
         try {
             const response = await axios.post('https://localhost:7065/api/Login', { Id: parseInt(id) });
-            dispatch(setUserKind(response.data.userKind));
+            dispatch(setUserKind(response.data));
             setLoading(false);
-            setIsLoggedIn(true);
+            if (response.data === 0) setSimpleWorkerEnter(true);
+            setIsLoggedIn(response.data === 0);
         } catch (error) {
             setLoading(false);
-            console.error('Connect error:', error);
-            setErrorMessage(error.response?.data?.message || 'Connect error, try again.');
+            if (!error.response) {
+                setErrorMessage('Network error, please check your connection.');
+            } else {
+                // טיפול בשגיאה שנזרקה מהשרת
+                if (error.response.status === 400) {
+                    setErrorMessage(error.response.data.message || 'Invalid request.');
+                } else {
+                    setErrorMessage(error.response.data.message);
+                }
+            }
         }
+    };
+
+    const handleRegularEnter = () => {
+        setSimpleWorkerEnter(true);
+        setIsLoggedIn(true); // הכנס את המשתמש כעובד פשוט
     };
 
     const handleLoginTeamLeader = async (e) => {
@@ -77,35 +92,36 @@ const LogIn = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary w-100" disabled={loading}>
+                    <button type="submit" className="btn btn-primary w-100" disabled={loading || userKind !== 0}>
                         {loading ? 'Loading...' : 'Connect'}
                     </button>
                 </form>
-                {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
-                {userKind !== 0 && (
-                    <form onSubmit={handleLoginTeamLeader} className="mt-4">
-                        <div className="mb-3">
-                            <label className="form-label">Password:</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <button type="submit" className="btn btn-primary w-100" disabled={loading}>
-                            {loading ? 'Loading...' : 'Connect'}
+                {userKind != 0 && (
+                    <div>
+                        <form onSubmit={handleLoginTeamLeader} className="mt-4">
+                            <div className="mb-3">
+                                <label className="form-label">Password:</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <button type="submit" className="btn btn-primary w-100" disabled={loading}>
+                                {loading ? 'Loading...' : 'Log in as a team leader'}
+                            </button>
+                        </form>
+
+                        <button onClick={handleRegularEnter} className="btn btn-secondary w-100 mt-2">
+                            Login as an employee
                         </button>
-                    </form>
+                    </div>
                 )}
+                {errorMessage && <p className="text-danger mt-2">{errorMessage}</p>}
             </div>
-<button 
-    onClick={(e) => setIsLoggedIn(true)} 
-    style={{ backgroundColor: '#343a40', color: 'transparent', border: 'none', height: '50px'}} 
-    aria-hidden="true" // כדי להסתיר את הכפתור מסך הקוראים
-></button>
         </div>
     );
 }

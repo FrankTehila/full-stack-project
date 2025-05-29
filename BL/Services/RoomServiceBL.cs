@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.api;
 using BL.api;
-using BL.Models;
+using BL.models;
 
 
 namespace BL.services

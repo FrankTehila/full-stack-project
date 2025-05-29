@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using DAL.api;
-using DAL.Api;
 using DAL.models;
 
-namespace DAL.Models;
+namespace DAL.models;
 
 public partial class TeamLeader:ITeamLeader
 {

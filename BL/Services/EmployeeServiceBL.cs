@@ -1,10 +1,7 @@
 ﻿using BL.api;
 using DAL.api;
-using DAL.Api;
 using DAL.models;
-using DAL.Models;
 using DAL.services;
-using DAL.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,19 +26,26 @@ namespace BL.services
 
         public int IsItTeamLeader(int ID)
         {
-            if (employeeService.IsItTeamLeader(ID))
+            try
             {
-                /// יצירת מספר רנדומלי בן 6 ספרות
-                Random random = new Random();
-                int randomCode = random.Next(100000, 999999);
-                //string recipientEmail = GetEmailByID(ID);
-                //string subject = "Your code to enter the system";
-                //string body = $"Your code is: {randomCode}"; 
+                if (employeeService.IsItTeamLeader(ID))
+                {
+                    /// יצירת מספר רנדומלי בן 6 ספרות
+                    Random random = new Random();
+                    int randomCode = random.Next(100000, 999999);
+                    //string recipientEmail = GetEmailByID(ID);
+                    //string subject = "Your code to enter the system";
+                    //string body = $"Your code is: {randomCode}";
 
-                //emailService.SendRandomCodeEmail(recipientEmail, subject, body); 
-                return randomCode;
+                    //emailService.SendRandomCodeEmail(recipientEmail, subject, body);
+                    return randomCode;
+                }
+                return 0;
             }
-            return 0;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public bool AddWorker(IEmployeeBL worker)
         {
@@ -91,9 +95,9 @@ namespace BL.services
             }
             return employeeService.GetEmployeeByID(workerID);
         }
-        //public string GetEmailByID(int ID)
-        //{
-        //    return employeeService.GetEmailByID(ID);
-        //}
+        public string GetEmailByID(int ID)
+        {
+            return employeeService.GetEmailByID(ID);
+        }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using DAL.Models;
+using DAL.api;
+using DAL.models;
 
 namespace DAL.models;
 
-public partial class Meeting
+public partial class Meeting:IMeeting
 {
     public int Id { get; set; }
 

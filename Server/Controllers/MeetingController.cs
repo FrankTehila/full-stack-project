@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using BL.api;
-using BL.Models;
+using BL.models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,20 +20,15 @@ namespace Server.Controllers
         }
 
         [HttpPost("Add")]
-        public IActionResult AddMeeting(MeetingBL meetingBL)
+        public IActionResult AddMeeting([FromBody] MeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId)
         {
-            meetingBL.Id = id++;
+            int roomNum = meetingServiceBL.AddMeeting(meetingBL, isBoard, isProjector, leaderId);
 
-            
-            if (meetingServiceBL.AddMeeting(meetingBL))
-            {
-                return Ok($"Meeting {meetingBL.Id} added successfully!!");
-            }
-            else
-            {
-                return BadRequest($"Meeting {meetingBL.Id} was not added.");
-            }
+            return roomNum == -1
+                ? Ok($"Error! The meeting was not added.")
+                : Ok($"The meeting added successfully in room number {roomNum}.");
         }
+
 
         [HttpDelete]
         public IActionResult Delete([FromBody] string id)
@@ -42,7 +37,7 @@ namespace Server.Controllers
             {
                 if (meetingServiceBL.RemoveMeeting(intId))
                 {
-                    return Ok($"Item with ID {intId} deleted successfully.");
+                    return Ok($"The meeting deleted successfully.");
                 }
                 else
                 {
@@ -54,5 +49,8 @@ namespace Server.Controllers
                 return BadRequest("Invalid ID format. ID must be an integer.");
             }
         }
+
+        //[HttpGet(${id})]
+
     }
 }

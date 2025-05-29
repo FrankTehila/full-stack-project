@@ -19,13 +19,20 @@ namespace Server.Controllers
         
         public IActionResult Login([FromBody] Dictionary<string, int> request)
         {
-            if (request == null || !request.ContainsKey("Id"))
+            try
             {
-                return BadRequest("Invalid request");
-            }
+                if (request == null || !request.ContainsKey("Id"))
+                {
+                    return BadRequest("Invalid request");
+                }
 
-            int id = request["Id"];
-            return Ok(_employeeServiceBL.IsItTeamLeader(id));
+                int id = request["Id"];
+                return Ok(_employeeServiceBL.IsItTeamLeader(id));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message }); // החזרת שגיאה לריאקט
+            }
         }
        
 

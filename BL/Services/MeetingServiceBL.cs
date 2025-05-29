@@ -7,35 +7,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BL.api;
+using DAL.services;
+using BL.models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace BL.services
 {
     public class MeetingServiceBL : IMeetingServiceBL
     {
-        IMeetingBL _meeting;
-        public MeetingServiceBL(IMeetingBL meeting)
+        MeetingService _meeting;
+        public MeetingServiceBL(MeetingService meeting)
         {
             this._meeting = meeting;
         }
-        //הפונקציה מקבלת ת.ז. של ראש הצוות זמן התחלה וזמן סיום וקובעת פגישה
-        //מחזירה trueאם הצליחה...
-        public bool ScheduleMeeting(string id, DateTime start, DateTime end)
-        {
 
-            return true;
-        }
-        //מה להשאיר?
-        //public bool AddMeeting(IMeetingBL meeting) 
-        //{
-        //    return _meeting.AddMeeting(meeting);
-        //}
-
-        public bool AddMeeting(IMeetingBL meeting)
+        public int AddMeeting(IMeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId)
         {
-            throw new NotImplementedException();
+            List<Room> matchingRooms = _meeting.GetRoomsByParameters(isBoard, isProjector);
+            List<Room> selectedRooms = matchingRooms
+                    .Where(room => _meeting.IsFreeAtTime(room, meetingBL.Date, meetingBL.StartTime, meetingBL.Duration))
+                    .ToList();
+            Room theRoom = selectedRooms.FirstOrDefault(r => _meeting.GetNumOfWorkersByTeamLeaderId(leaderId) <= r.NumOfSeats);
+
+            if (theRoom == null)
+            {
+                return -1;
+            }
+
+            IMeeting newMeeting = new Meeting()
+            {
+                Room = theRoom,
+                Date = meetingBL.Date,
+                StartTime = meetingBL.StartTime,
+                Duration = meetingBL.Duration,
+                LeaderId = leaderId,
+            };
+
+            _meeting.AddMeeting(newMeeting);
+            return newMeeting.Id;
         }
+
+
 
         //מחזירה את כל הפגישות של עובד מסוים שעוד לא התבצעו
         //public List<Meating> GetAllMeeting(string id)
@@ -58,5 +71,5 @@ namespace BL.services
         }
     }
 
-   
+
 }

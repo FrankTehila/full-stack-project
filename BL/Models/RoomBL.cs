@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Models
+namespace BL.models
 {
     public class RoomBL:IRoomBL
     {

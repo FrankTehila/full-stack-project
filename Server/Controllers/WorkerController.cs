@@ -1,6 +1,6 @@
 ﻿using BL.api;
-using BL.Models;
-using DAL.Api;
+using BL.models;
+using DAL.api;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 

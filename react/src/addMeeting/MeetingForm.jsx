@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './MeetingForm.css'; // Import the CSS file
+import './MeetingForm.css';
+import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 
 const MeetingForm = () => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // API call to add a meeting
+    const[errorMessage, setErrorMessage] = useState('');
+
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target); // אוסף את הנתונים מהטופס
+    const meetingData = {
+        date: formData.get('date'),
+        time: formData.get('time'),
+        duration: formData.get('duration'),
+        isProjector: formData.get('projector') === 'on', // המרת תיבת סימון לערך בוליאני
+        isBoard: formData.get('board') === 'on', // המרת תיבת סימון לערך בוליאני
+        leaderId: 1 // יש להחליף במזהה המנהיג המתאים
     };
+
+    const response = await axios.post('https://localhost:7065/api/meeting/add', meetingData);
+    setErrorMessage(response.data);
+};
+
+
 
     const handleBackToMenu = () => {
 
@@ -16,7 +33,7 @@ const MeetingForm = () => {
     return (
         <>
             <div className="container d-flex justify-content-center align-items-center vh-100">
-                <div className="card p-4 shadow" style={{ width: '400px', marginTop: '70px' }}> {/* הוסף margin-top */}
+                <div className="card p-4 shadow" style={{ width: '400px', marginTop: '20px' }}> {/* הוסף margin-top */}
                     <h2 className="text-center mb-4 gradient-text">Schedule a Meeting</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3">
@@ -69,6 +86,8 @@ const MeetingForm = () => {
                         </div>
                         <button type="submit" className="btn btn-primary w-100">Schedule Meeting</button>
                     </form>
+                    <br />
+                    <p>{errorMessage}</p>
                 </div>
                 <button className="circle-button" onClick={handleBackToMenu}>
                     <div className="arrow"></div>

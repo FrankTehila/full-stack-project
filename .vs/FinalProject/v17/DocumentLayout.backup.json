@@ -3,40 +3,180 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\meetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\meetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\migrations\\dbclassmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\dbclassmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\employeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\employeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iemployeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iemployeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\employeecontroler.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\employeecontroler.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\meetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\meetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\program (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\program (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\meetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\employeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\employeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\imeetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\imeetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\imeetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\imeetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iemployeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iemployeeservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\roomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\roomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\imeeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\imeeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\meeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\meeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\workercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\models\\roombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\models\\roombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iroomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iroomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iroombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iroombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\teamleaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\teamleaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\teamleader (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\teamleader (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\migrations\\20250520162045_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\20250520162045_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\migrations\\dbclassmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\migrations\\dbclassmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iteamleader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iteamleader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\models\\teamleaderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\models\\teamleaderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iworkerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iworkerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\models\\meetingbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\models\\meetingbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\models\\employeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\models\\employeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iteamleaderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iteamleaderbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\imeetingbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\imeetingbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iemployeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iemployeebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\employeecontroler.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\employeecontroler.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -63,80 +203,8 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\finalProject\\BL\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\meeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\meeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\roomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\roomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iroomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iroomservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\services\\meetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\services\\meetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\meetingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\meetingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\meetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\meetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\models\\meetingbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\models\\meetingbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\models\\roombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\models\\roombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\iroombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\iroombl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\bl\\api\\imeetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA70687-1EBC-4800-9963-B0CBB01184DD}|BL\\BL.csproj|solutionrelative:bl\\api\\imeetingservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\server\\controllers\\teamleader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A966C410-4124-417A-BE96-CEE528DAEA7C}|Server\\Server.csproj|solutionrelative:server\\controllers\\teamleader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\api\\imeetingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|solutionrelative:dal\\api\\imeetingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CADF10D-5BB9-4BE5-8393-3DF056742B54}|DAL\\DAL.csproj|c:\\users\\user\\documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -150,108 +218,384 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbclass.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\dbclass.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\dbclass.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\dbclass.cs",
-              "RelativeToolTip": "DAL\\Models\\dbclass.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAuwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T08:10:39.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbClassModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Migrations\\dbClassModelSnapshot.cs",
-              "RelativeDocumentMoniker": "DAL\\Migrations\\dbClassModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Migrations\\dbClassModelSnapshot.cs",
-              "RelativeToolTip": "DAL\\Migrations\\dbClassModelSnapshot.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MeetingServiceBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\MeetingServiceBL.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\MeetingServiceBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\MeetingServiceBL.cs",
+              "RelativeToolTip": "BL\\Services\\MeetingServiceBL.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAApwBoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T08:08:30.063Z"
+              "WhenOpened": "2025-04-30T07:40:22.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "DAL\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "DAL\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAIwA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T12:26:51.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EmployeeServiceBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\EmployeeServiceBL.cs",
               "RelativeDocumentMoniker": "BL\\Services\\EmployeeServiceBL.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\EmployeeServiceBL.cs",
               "RelativeToolTip": "BL\\Services\\EmployeeServiceBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAApwCcAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T20:17:00.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "IMeetingService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IMeetingService.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\IMeetingService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IMeetingService.cs",
+              "RelativeToolTip": "DAL\\Api\\IMeetingService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA+wBUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:42:48.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MeetingController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\MeetingController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\MeetingController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\MeetingController.cs",
               "RelativeToolTip": "Server\\Controllers\\MeetingController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:22:38.763Z"
+              "WhenOpened": "2025-04-28T12:22:38.763Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program (1).cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Program (1).cs",
-              "RelativeDocumentMoniker": "Server\\Program (1).cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Program (1).cs",
-              "RelativeToolTip": "Server\\Program (1).cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAkwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:46:31.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeControler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\EmployeeControler.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\EmployeeControler.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\EmployeeControler.cs",
-              "RelativeToolTip": "Server\\Controllers\\EmployeeControler.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T20:33:37.01Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "IEmployeeServiceBL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IEmployeeServiceBL.cs",
               "RelativeDocumentMoniker": "BL\\Api\\IEmployeeServiceBL.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IEmployeeServiceBL.cs",
               "RelativeToolTip": "BL\\Api\\IEmployeeServiceBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T20:16:52.712Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MeetingService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\MeetingService.cs",
+              "RelativeDocumentMoniker": "DAL\\Services\\MeetingService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\MeetingService.cs",
+              "RelativeToolTip": "DAL\\Services\\MeetingService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA7wBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T07:55:19.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMeetingServiceBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IMeetingServiceBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IMeetingServiceBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IMeetingServiceBL.cs",
+              "RelativeToolTip": "BL\\Api\\IMeetingServiceBL.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T07:41:15.651Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\EmailService.cs",
+              "RelativeToolTip": "BL\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T15:56:28.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program (1).cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Program (1).cs",
+              "RelativeDocumentMoniker": "Server\\Program (1).cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Program (1).cs",
+              "RelativeToolTip": "Server\\Program (1).cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T17:46:31.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IMeeting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IMeeting.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\IMeeting.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IMeeting.cs",
+              "RelativeToolTip": "DAL\\Api\\IMeeting.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:38:38.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoomServiceBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\RoomServiceBL.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\RoomServiceBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\RoomServiceBL.cs",
+              "RelativeToolTip": "BL\\Services\\RoomServiceBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:18:38.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Meeting.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Meeting.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Meeting.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Meeting.cs",
+              "RelativeToolTip": "DAL\\Models\\Meeting.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T19:49:41.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "Server\\Controllers\\RoomController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:44:57.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WorkerController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\WorkerController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\WorkerController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\WorkerController.cs",
+              "RelativeToolTip": "Server\\Controllers\\WorkerController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:24:14.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RoomBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\RoomBL.cs",
+              "RelativeDocumentMoniker": "BL\\Models\\RoomBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\RoomBL.cs",
+              "RelativeToolTip": "BL\\Models\\RoomBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:53:08.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IRoomServiceBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomServiceBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IRoomServiceBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomServiceBL.cs",
+              "RelativeToolTip": "BL\\Api\\IRoomServiceBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:11:06.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IRoomBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IRoomBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomBL.cs",
+              "RelativeToolTip": "BL\\Api\\IRoomBL.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:53:29.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Program.cs",
+              "RelativeDocumentMoniker": "DAL\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Program.cs",
+              "RelativeToolTip": "DAL\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:57:26.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "dbclass.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\dbclass.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\dbclass.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\dbclass.cs",
+              "RelativeToolTip": "DAL\\Models\\dbclass.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwBYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T08:10:39.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoomService.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\IRoomService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoomService.cs",
+              "RelativeToolTip": "DAL\\Api\\IRoomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:24:41.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TeamLeaderService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\TeamLeaderService.cs",
+              "RelativeDocumentMoniker": "DAL\\Services\\TeamLeaderService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\TeamLeaderService.cs",
+              "RelativeToolTip": "DAL\\Services\\TeamLeaderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:21:41.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "DAL\\Services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "DAL\\Services\\EmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:26:51.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TeamLeader (1).cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\TeamLeader (1).cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\TeamLeader (1).cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\TeamLeader (1).cs",
+              "RelativeToolTip": "DAL\\Models\\TeamLeader (1).cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:38:02.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Room.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Room.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Room.cs",
+              "RelativeToolTip": "DAL\\Models\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:24:51.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Employee.cs",
+              "RelativeToolTip": "DAL\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:37:49.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "DAL\\Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\RoomService.cs",
+              "RelativeToolTip": "DAL\\Services\\RoomService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:07:08.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20250520162045_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Migrations\\20250520162045_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\20250520162045_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Migrations\\20250520162045_InitialCreate.cs",
+              "RelativeToolTip": "DAL\\Migrations\\20250520162045_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:51:50.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "dbClassModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Migrations\\dbClassModelSnapshot.cs",
+              "RelativeDocumentMoniker": "DAL\\Migrations\\dbClassModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Migrations\\dbClassModelSnapshot.cs",
+              "RelativeToolTip": "DAL\\Migrations\\dbClassModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T08:08:30.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IWorker.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IWorker.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\IWorker.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IWorker.cs",
+              "RelativeToolTip": "DAL\\Api\\IWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:53:15.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ITeamLeader.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\ITeamLeader.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\ITeamLeader.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\ITeamLeader.cs",
+              "RelativeToolTip": "DAL\\Api\\ITeamLeader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:53:16.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IRoom.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoom.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\IRoom.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoom.cs",
+              "RelativeToolTip": "DAL\\Api\\IRoom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:12:38.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "IEmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "DAL\\Api\\IEmployeeService.cs",
@@ -263,43 +607,151 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IRoomServiceBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomServiceBL.cs",
-              "RelativeDocumentMoniker": "BL\\Api\\IRoomServiceBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomServiceBL.cs",
-              "RelativeToolTip": "BL\\Api\\IRoomServiceBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAYAAAA",
+              "DocumentIndex": 32,
+              "Title": "IEmployee.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IEmployee.cs",
+              "RelativeDocumentMoniker": "DAL\\Api\\IEmployee.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IEmployee.cs",
+              "RelativeToolTip": "DAL\\Api\\IEmployee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T13:11:06.875Z"
+              "WhenOpened": "2025-05-25T18:53:02.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RoomServiceBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\RoomServiceBL.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\RoomServiceBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\RoomServiceBL.cs",
-              "RelativeToolTip": "BL\\Services\\RoomServiceBL.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 33,
+              "Title": "TeamLeaderBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\TeamLeaderBL.cs",
+              "RelativeDocumentMoniker": "BL\\Models\\TeamLeaderBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\TeamLeaderBL.cs",
+              "RelativeToolTip": "BL\\Models\\TeamLeaderBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:18:38.523Z"
+              "WhenOpened": "2025-05-25T18:55:45.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Room.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Room.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Room.cs",
-              "RelativeToolTip": "DAL\\Models\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "DocumentIndex": 34,
+              "Title": "IWorkerBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IWorkerBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IWorkerBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IWorkerBL.cs",
+              "RelativeToolTip": "BL\\Api\\IWorkerBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:24:51.423Z"
+              "WhenOpened": "2025-05-25T19:17:28.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 35,
+              "Title": "MeetingBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\MeetingBL.cs",
+              "RelativeDocumentMoniker": "BL\\Models\\MeetingBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\MeetingBL.cs",
+              "RelativeToolTip": "BL\\Models\\MeetingBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T07:47:51.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EmployeeBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\EmployeeBL.cs",
+              "RelativeDocumentMoniker": "BL\\Models\\EmployeeBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\EmployeeBL.cs",
+              "RelativeToolTip": "BL\\Models\\EmployeeBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:01:30.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IMeetingBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IMeetingBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IMeetingBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IMeetingBL.cs",
+              "RelativeToolTip": "BL\\Api\\IMeetingBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T17:52:44.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IEmployeeBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IEmployeeBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IEmployeeBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IEmployeeBL.cs",
+              "RelativeToolTip": "BL\\Api\\IEmployeeBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T19:16:45.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ITeamLeaderBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\ITeamLeaderBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\ITeamLeaderBL.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\ITeamLeaderBL.cs",
+              "RelativeToolTip": "BL\\Api\\ITeamLeaderBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T18:55:33.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Server\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T13:08:13.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "EmployeeControler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\EmployeeControler.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\EmployeeControler.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\EmployeeControler.cs",
+              "RelativeToolTip": "Server\\Controllers\\EmployeeControler.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T20:33:37.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Server\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-25T16:00:37.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Server.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Server.csproj",
+              "RelativeDocumentMoniker": "Server\\Server.csproj",
+              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Server.csproj",
+              "RelativeToolTip": "Server\\Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-30T06:41:39.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
               "Title": "LogIn.jsx",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\react\\src\\logIn\\LogIn.jsx",
               "RelativeDocumentMoniker": "react\\src\\logIn\\LogIn.jsx",
@@ -311,43 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MeetingServiceBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\MeetingServiceBL.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\MeetingServiceBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Services\\MeetingServiceBL.cs",
-              "RelativeToolTip": "BL\\Services\\MeetingServiceBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:40:22.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\RoomController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\RoomController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\RoomController.cs",
-              "RelativeToolTip": "Server\\Controllers\\RoomController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:44:57.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Meeting.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Meeting.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Meeting.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Models\\Meeting.cs",
-              "RelativeToolTip": "DAL\\Models\\Meeting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T19:49:41.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 44,
               "Title": "Server.http",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Server.http",
               "RelativeDocumentMoniker": "Server\\Server.http",
@@ -359,91 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MeetingManager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\MeetingManager.cs",
-              "RelativeDocumentMoniker": "DAL\\Services\\MeetingManager.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\MeetingManager.cs",
-              "RelativeToolTip": "DAL\\Services\\MeetingManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T12:57:26.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MeetingService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\MeetingService.cs",
-              "RelativeDocumentMoniker": "DAL\\Services\\MeetingService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\MeetingService.cs",
-              "RelativeToolTip": "DAL\\Services\\MeetingService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowCkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:55:19.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MeetingBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\MeetingBL.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\MeetingBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\MeetingBL.cs",
-              "RelativeToolTip": "BL\\Models\\MeetingBL.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:47:51.913Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "RoomBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\RoomBL.cs",
-              "RelativeDocumentMoniker": "BL\\Models\\RoomBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Models\\RoomBL.cs",
-              "RelativeToolTip": "BL\\Models\\RoomBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:53:08.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IRoomBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomBL.cs",
-              "RelativeDocumentMoniker": "BL\\Api\\IRoomBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IRoomBL.cs",
-              "RelativeToolTip": "BL\\Api\\IRoomBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:53:29.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IRoom.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoom.cs",
-              "RelativeDocumentMoniker": "DAL\\Api\\IRoom.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoom.cs",
-              "RelativeToolTip": "DAL\\Api\\IRoom.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:12:38.006Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Program.cs",
-              "RelativeDocumentMoniker": "DAL\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Program.cs",
-              "RelativeToolTip": "DAL\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T12:57:26.205Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 49,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\finalProject\\Server\\Program.cs",
               "ToolTip": "H:\\finalProject\\Server\\Program.cs",
@@ -452,31 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IRoomService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoomService.cs",
-              "RelativeDocumentMoniker": "DAL\\Api\\IRoomService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IRoomService.cs",
-              "RelativeToolTip": "DAL\\Api\\IRoomService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:24:41.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "RoomService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\RoomService.cs",
-              "RelativeDocumentMoniker": "DAL\\Services\\RoomService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Services\\RoomService.cs",
-              "RelativeToolTip": "DAL\\Services\\RoomService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:07:08.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 47,
               "Title": "About.jsx",
               "DocumentMoniker": "H:\\finalProject\\react\\final\\src\\about\\About.jsx",
               "ToolTip": "H:\\finalProject\\react\\final\\src\\about\\About.jsx",
@@ -485,19 +793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Server.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Server.csproj",
-              "RelativeDocumentMoniker": "Server\\Server.csproj",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Server.csproj",
-              "RelativeToolTip": "Server\\Server.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-30T06:41:39.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 46,
               "Title": "Server.csproj.user",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Server.csproj.user",
               "RelativeDocumentMoniker": "Server\\Server.csproj.user",
@@ -509,19 +805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IMeetingServiceBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IMeetingServiceBL.cs",
-              "RelativeDocumentMoniker": "BL\\Api\\IMeetingServiceBL.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\BL\\Api\\IMeetingServiceBL.cs",
-              "RelativeToolTip": "BL\\Api\\IMeetingServiceBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T07:41:15.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 48,
               "Title": "Api.js",
               "DocumentMoniker": "H:\\finalProject\\react\\final\\src\\Api.js",
               "ToolTip": "H:\\finalProject\\react\\final\\src\\Api.js",
@@ -530,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 51,
               "Title": "TeamLeader.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\Server\\Controllers\\TeamLeader.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\TeamLeader.cs",
@@ -542,19 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IMeetingManager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IMeetingManager.cs",
-              "RelativeDocumentMoniker": "DAL\\Api\\IMeetingManager.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\Api\\IMeetingManager.cs",
-              "RelativeToolTip": "DAL\\Api\\IMeetingManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T12:57:26.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 52,
               "Title": "DAL.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\\u05DE\u05E1\u05DC\u05D5\u05DC\\full-stack-project\\DAL\\DAL.csproj",
               "RelativeDocumentMoniker": "DAL\\DAL.csproj",
@@ -566,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 50,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\finalProject\\BL\\Program.cs",
               "ToolTip": "H:\\finalProject\\BL\\Program.cs",

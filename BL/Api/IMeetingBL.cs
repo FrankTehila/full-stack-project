@@ -1,5 +1,4 @@
 ﻿using DAL.models;
-using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,7 @@ namespace BL.api
     {
         public int Id { get; set; }
 
-        public int RoomId { get; set; }
+        //public int RoomId { get; set; }
 
         public DateTime Date { get; set; }
 
@@ -22,9 +21,9 @@ namespace BL.api
 
         public int LeaderId { get; set; }
 
-        public  TeamLeader Leader { get; set; }
+        public  TeamLeader? Leader { get; set; }
 
-        public  Room Room { get; set; }
+        public  Room? Room { get; set; }
     }
 
 }

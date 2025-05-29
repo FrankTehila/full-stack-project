@@ -1,8 +1,6 @@
 ﻿using BL.api;
 using DAL.api;
-using DAL.Api;
 using DAL.services;
-using DAL.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
