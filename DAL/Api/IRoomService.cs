@@ -13,5 +13,6 @@ namespace DAL.api
         public bool AddRoom(IRoom room);
         public bool RemoveRoom(int roomID);
         public Room GetRoomByID(int roomId);
+        public bool UpdateRoom(Room room);
     }
 }

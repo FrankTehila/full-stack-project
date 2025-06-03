@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL.api
 {
-    public interface IEmployee:IWorker
+    public interface IEmployee : IWorker
     {
-        public int LeaderId { get; set; }
+        public int? LeaderId { get; set; }
     }
 }

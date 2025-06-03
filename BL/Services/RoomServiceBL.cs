@@ -59,7 +59,38 @@ namespace BL.services
             return _roomDAL.RemoveRoom(roomID);
         }
 
-       
+        public bool UpdateRoom(int roomId, RoomBL updatedRoom)
+        {
+            var existingRoom = _roomDAL.GetRoomByID(roomId);
+            if (existingRoom == null)
+            {
+                throw new Exception($"Room with ID {roomId} does not exist");
+            }
+
+            // עדכון רק השדות שסופקו בבקשה עם בדיקה האם יש ערך (HasValue)
+            if (updatedRoom.NumOfSeats.HasValue)
+            {
+                existingRoom.NumOfSeats = updatedRoom.NumOfSeats.Value;
+            }
+
+            if (updatedRoom.NumOfComputers.HasValue)
+            {
+                existingRoom.NumOfComputers = updatedRoom.NumOfComputers.Value;
+            }
+
+            if (updatedRoom.IsProjector.HasValue)
+            {
+                existingRoom.IsProjector = updatedRoom.IsProjector.Value;
+            }
+
+            if (updatedRoom.IsBoard.HasValue)
+            {
+                existingRoom.IsBoard = updatedRoom.IsBoard.Value;
+            }
+
+            return _roomDAL.UpdateRoom(existingRoom);
+        }
+
     }
-  
+
 }

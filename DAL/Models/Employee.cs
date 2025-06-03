@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DAL.models;
 
-public partial class Employee:IEmployee
+public partial class Employee : IEmployee
 {
     public int Id { get; set; }
 
@@ -14,5 +14,6 @@ public partial class Employee:IEmployee
 
     public string Email { get; set; } = null!;
 
-    public int LeaderId { get; set; }
+    public int? LeaderId { get; set; }
+
 }

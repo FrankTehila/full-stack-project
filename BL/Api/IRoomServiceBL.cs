@@ -14,6 +14,8 @@ namespace BL.api
         public Room GetRoomByID(int roomId);
         public bool AddRoom(IRoomBL room);
         public bool RemoveRoom(int roomID);
-       
-}
+        public bool UpdateRoom(int roomId, RoomBL updatedRoom);
+
+
+    }
 }

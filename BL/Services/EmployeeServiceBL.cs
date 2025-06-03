@@ -49,7 +49,7 @@ namespace BL.services
         }
         public bool AddWorker(IEmployeeBL worker)
         {
-            
+
             IEmployee employee = new Employee
             {
                 Id = worker.Id,
@@ -63,7 +63,7 @@ namespace BL.services
         }
         public bool AddWorker(ITeamLeaderBL worker)
         {
-          
+
             ITeamLeader teamLeader = new TeamLeader
             {
                 Id = worker.Id,
@@ -79,9 +79,9 @@ namespace BL.services
 
         public bool RemoveWorker(int workerID)
         {
-            if(employeeService.IsItTeamLeader(workerID)) 
-            {                
-              
+            if (employeeService.IsItTeamLeader(workerID))
+            {
+
                 return teamLeaderService.RemoveTeamLeader(workerID);
             }
             return employeeService.RemoveEmployee(workerID);
@@ -99,5 +99,7 @@ namespace BL.services
         {
             return employeeService.GetEmailByID(ID);
         }
+
+
     }
 }

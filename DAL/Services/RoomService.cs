@@ -58,5 +58,18 @@ namespace DAL.services
             return room;
         }
 
+        public bool UpdateRoom(Room room)
+        {
+            var existingRoom = _context.Rooms.FirstOrDefault(r => r.Id == room.Id);
+            if (existingRoom == null)
+            {
+                throw new Exception($"Room with ID {room.Id} does not exist");
+            }
+
+            _context.Rooms.Update(room);
+            _context.SaveChanges();
+            return true;
+        }
+
     }
 }
