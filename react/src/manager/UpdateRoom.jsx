@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../addMeeting/MeetingForm.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 const UpdateRoom = () => {
     const [roomNumber, setRoomNumber] = useState('');
     const [numOfSeats, setNumOfSeats] = useState('');
@@ -17,23 +18,32 @@ const UpdateRoom = () => {
         setLoading(true);
         setErrorMessage('');
         setSuccessMessage('');
+
         try {
             await axios.put('http://localhost:5036/api/Room', {
-                roomNumber: Number(roomNumber),
+                id: Number(roomNumber), // שולח את ה-ID דרך ה-Body
                 numOfSeats: numOfSeats ? Number(numOfSeats) : undefined,
                 numOfComputers: numOfComputers ? Number(numOfComputers) : undefined,
                 isProjector,
                 isBoard,
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
             });
+
             setSuccessMessage('Room updated successfully!');
+
+            //  איפוס השדות כדי לאפשר עדכון נוסף
             setRoomNumber('');
             setNumOfSeats('');
             setNumOfComputers('');
             setIsProjector(false);
             setIsBoard(false);
         } catch (error) {
-            setErrorMessage('Error updating room');
+            setErrorMessage(`Error updating room: ${error.response?.data || error.message}`);
         }
+
         setLoading(false);
     };
 
@@ -104,4 +114,5 @@ const UpdateRoom = () => {
         </div>
     );
 };
+
 export default UpdateRoom;

@@ -8,7 +8,7 @@ const AddWorker = () => {
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [leaderId, setLeaderId] = useState(''); // חדש
+    const [leaderId, setLeaderId] = useState('');
     const [loading, setLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
@@ -18,29 +18,39 @@ const AddWorker = () => {
         setLoading(true);
         setErrorMessage('');
         setSuccessMessage('');
-        try {
-            // בניית אובייקט דינאמי, רק עם שדות שמולאו
-            const data = {
-                id: Number(id),
-                email,
-                firstName,
-                lastName
-            };
-            // אם הוזן LeaderId, הוסף אותו
-            if (leaderId.trim() !== '') {
-                data.leaderId = Number(leaderId);
-            }
 
-            await axios.post("http://localhost:5036/api/Worker/AddWorker", data);
-            setSuccessMessage('העובד נוסף בהצלחה!');
+        const data = {
+            id: Number(id),
+            email: email.trim() !== '' ? email : 'default@email.com',
+            firstName,
+            lastName
+        };
+
+        if (leaderId.trim() === '') {
+            data.numOfWorkers = 0;
+        } else {
+            data.leaderId = Number(leaderId);
+        }
+
+        console.log("שליחת נתונים לשרת:", JSON.stringify(data, null, 2));
+
+        try {
+            const response = await axios.post("http://localhost:5036/api/Worker", data, {
+                headers: { 'Content-Type': 'application/json' }
+            });
+
+            console.log("תגובת שרת:", JSON.stringify(response.data, null, 2));
+            setSuccessMessage('העובד נוסף בהצלחה');
             setId('');
             setEmail('');
             setFirstName('');
             setLastName('');
             setLeaderId('');
         } catch (error) {
-            setErrorMessage('שגיאה בהוספת עובד');
+            console.error("שגיאת שרת:", JSON.stringify(error.response?.data || error.message, null, 2));
+            setErrorMessage(`שגיאה בהוספת עובד: ${error.response?.data || error.message}`);
         }
+
         setLoading(false);
     };
 
@@ -111,91 +121,3 @@ const AddWorker = () => {
 };
 
 export default AddWorker;
-
-
-
-// const AddWorker = () => {
-//     const [form, setForm] = useState({
-//         id: "",
-//         email: "",
-//         firstName: "",
-//         lastName: "",
-//     });
-
-//     const handleChange = (e) => {
-//         const { name, value } = e.target;
-//         setForm((prev) => ({
-//             ...prev,
-//             [name]: value,
-//         }));
-//     };
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         // שלח את הנתונים לשרת (עדכן את ה-URL בהתאם)
-//         await fetch("http://localhost:5036/api/Worker/AddWorker", {
-//             method: "POST",
-//             headers: { "Content-Type": "application/json" },
-//             body: JSON.stringify({
-//                 id: Number(form.id),
-//                 email: form.email,
-//                 firstName: form.firstName,
-//                 lastName: form.lastName
-//             }),
-//         });
-//         setForm({
-//             id: "",
-//             email: "",
-//             firstName: "",
-//             lastName: "",
-//         });
-//     };
-
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <div>
-//                 <label>ID:</label>
-//                 <input
-//                     type="number"
-//                     name="id"
-//                     value={form.id}
-//                     onChange={handleChange}
-//                     required
-//                 />
-//             </div>
-//             <div>
-//                 <label>First Name:</label>
-//                 <input
-//                     type="text"
-//                     name="firstName"
-//                     value={form.firstName}
-//                     onChange={handleChange}
-//                     required
-//                 />
-//             </div>
-//             <div>
-//                 <label>Last Name:</label>
-//                 <input
-//                     type="text"
-//                     name="lastName"
-//                     value={form.lastName}
-//                     onChange={handleChange}
-//                     required
-//                 />
-//             </div>
-//             <div>
-//                 <label>Email:</label>
-//                 <input
-//                     type="email"
-//                     name="email"
-//                     value={form.email}
-//                     onChange={handleChange}
-//                     required
-//                 />
-//             </div>
-//             <button type="submit">שלח</button>
-//         </form>
-//     );
-// };
-
-// export default AddWorker;
