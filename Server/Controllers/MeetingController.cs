@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using BL.api;
 using BL.models;
+using Microsoft.AspNetCore.Authorization;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Server.Controllers
 {
@@ -19,9 +19,20 @@ namespace Server.Controllers
             meetingServiceBL = _meetingServiceBL;
         }
 
+        [Authorize]
         [HttpPost("Add")]
         public IActionResult AddMeeting([FromBody] MeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId)
         {
+            // שלוף מהטוקן את ה-userKind
+            var userKindClaim = User.Claims.FirstOrDefault(c => c.Type == "userKind");
+            if (userKindClaim == null || userKindClaim.Value == "0")
+            {
+                return Forbid("רק ראש צוות מורשה להוסיף פגישה");
+            }
+
+            // אפשר גם לשלוף את ה-id של ראש הצוות מהטוקן אם רוצים ולא מהקליינט
+            // var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+
             int roomNum = meetingServiceBL.AddMeeting(meetingBL, isBoard, isProjector, leaderId);
 
             return roomNum == -1

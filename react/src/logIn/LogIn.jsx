@@ -2,27 +2,22 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserKind } from '../store/proxy';
-import { useNavigate } from 'react-router-dom';
+import Navigation from '../navigation/Navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LogIn.css';
-import Navigation from '../navigation/Navigation';
 
 const LogIn = () => {
     const dispatch = useDispatch();
     const userKind = useSelector((state) => state.proxy.userKind);
-    const navigate = useNavigate();
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-   // const [simpleWorkerEnter, setSimpleWorkerEnter] = useState(false);
+    const [infoMessage, setInfoMessage] = useState('');
 
-    const validateId = (id) => {
-        const idRegex = /^[0-9]{1,9}$/;
-        return idRegex.test(id);
-    };
+    const validateId = (id) => /^[0-9]{1,9}$/.test(id);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -37,29 +32,28 @@ const LogIn = () => {
 
         try {
             const response = await axios.post('https://localhost:7065/api/Login', { Id: parseInt(id) });
-            dispatch(setUserKind(response.data));
+            localStorage.setItem('token', response.data.token);
+
+            dispatch(setUserKind(response.data.userKind));
             setLoading(false);
-            if (response.data === 0)
-                setIsLoggedIn(response.data === 0);
-            else setErrorMessage("A password has been sent by email to log in as a team leader.")
+            if (response.data.userKind === 0) {
+                setIsLoggedIn(true);
+                setInfoMessage('');
+            } else {
+                setInfoMessage("A login code was sent to your email.");
+                setErrorMessage('');
+            }
         } catch (error) {
             setLoading(false);
+            setInfoMessage('');
             if (!error.response) {
                 setErrorMessage('Network error, please check your connection.');
+            } else if (error.response.status === 400) {
+                setErrorMessage(error.response.data.message || 'Invalid request.');
             } else {
-                // טיפול בשגיאה שנזרקה מהשרת
-                if (error.response.status === 400) {
-                    setErrorMessage(error.response.data.message || 'Invalid request.');
-                } else {
-                    setErrorMessage(error.response.data.message);
-                }
+                setErrorMessage(error.response.data.message);
             }
         }
-    };
-
-    const handleRegularEnter = () => {
-        dispatch(setUserKind(0));
-        setIsLoggedIn(true); // הכנס את המשתמש כעובד פשוט
     };
 
     const handleLoginTeamLeader = async (e) => {
@@ -70,7 +64,7 @@ const LogIn = () => {
             setIsLoggedIn(true);
         } else {
             setLoading(false);
-            setErrorMessage("The password is not correct!!");
+            setErrorMessage("The code you entered is incorrect!");
         }
     };
 
@@ -81,10 +75,10 @@ const LogIn = () => {
     return (
         <div className="container d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: '#343a40' }}>
             <div className="card p-4 shadow" style={{ width: '400px' }}>
-                <h2 className="text-center mb-4">Log-In</h2>
+                <h2 className="text-center mb-4">Log In</h2>
                 <form onSubmit={handleLogin}>
                     <div className="mb-3">
-                        <label className="form-label">Insert ID to connect:</label>
+                        <label className="form-label">Enter your ID number:</label>
                         <input
                             type="text"
                             className="form-control"
@@ -94,15 +88,20 @@ const LogIn = () => {
                         />
                     </div>
                     <button type="submit" className="btn btn-primary w-100" disabled={loading || userKind !== 0}>
-                        {loading ? 'Loading...' : 'Connect'}
+                        {loading ? 'Loading...' : 'Log In'}
                     </button>
                 </form>
 
                 {userKind != 0 && (
                     <div>
+                        {infoMessage && (
+                            <p className="text-center" style={{ color: '#adb5bd', fontWeight: 'bold' }}>
+                                {infoMessage}
+                            </p>
+                        )}
                         <form onSubmit={handleLoginTeamLeader} className="mt-4">
                             <div className="mb-3">
-                                <label className="form-label">Password:</label>
+                                <label className="form-label">Login code:</label>
                                 <input
                                     type="password"
                                     className="form-control"
@@ -112,13 +111,9 @@ const LogIn = () => {
                                 />
                             </div>
                             <button type="submit" className="btn btn-primary w-100" disabled={loading}>
-                                {loading ? 'Loading...' : 'Log in as a team leader'}
+                                {loading ? 'Loading...' : 'Log in as Team Leader'}
                             </button>
                         </form>
-
-                        <button onClick={handleRegularEnter} className="btn btn-secondary w-100 mt-2">
-                            Login as an employee
-                        </button>
                     </div>
                 )}
                 {errorMessage && <p className="text-danger mt-2">{errorMessage}</p>}

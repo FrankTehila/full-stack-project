@@ -28,8 +28,6 @@ namespace DAL.services
                 }
                 return false;
             }
-
-
             return true;
         }
 
@@ -74,6 +72,17 @@ namespace DAL.services
             }
             return teamLeaderInDB;
 
+        }
+        public bool AddMeetingToTeamLeader(Meeting meeting)
+        {
+            TeamLeader teamLeader = _context.TeamLeaders.FirstOrDefault(tl => tl.Id == meeting.LeaderId);
+            if (teamLeader == null)
+            {
+                throw new Exception("Team leader does not exist");
+            }
+            teamLeader.Meetings.Add(meeting);
+            _context.SaveChanges();
+            return true;
         }
     }
 }

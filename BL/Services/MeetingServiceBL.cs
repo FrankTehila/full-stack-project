@@ -17,10 +17,22 @@ namespace BL.services
     public class MeetingServiceBL : IMeetingServiceBL
     {
         MeetingService _meeting;
-        public MeetingServiceBL(MeetingService meeting)
+        TeamLeaderService _teamLeaderService;
+        EmployeeService _employeeService;
+        EmailService _emailService;
+
+        public MeetingServiceBL(
+            MeetingService meeting,
+            TeamLeaderService teamLeaderService,
+            EmployeeService employeeService,
+            EmailService emailService)
         {
-            this._meeting = meeting;
+            _meeting = meeting;
+            _teamLeaderService = teamLeaderService;
+            _employeeService = employeeService;
+            _emailService = emailService;
         }
+
 
         public int AddMeeting(IMeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId)
         {
@@ -45,6 +57,32 @@ namespace BL.services
             };
 
             _meeting.AddMeeting(newMeeting);
+
+            _teamLeaderService.AddMeetingToTeamLeader((Meeting)newMeeting);
+            TeamLeader teamLeader = _teamLeaderService.GetTeamLeaderByID(leaderId);
+
+
+            var employees = _employeeService.GetEmployeesByLeaderId(leaderId);
+            List<string> emails = employees.Select(e => e.Email).ToList();
+            emails.Add(teamLeader.Email);
+
+            string subject = "זימון לפגישה חדשה";
+            string body = $@"
+        שלום,<br/>
+        הוזמנתם לפגישה בתאריך: {newMeeting.Date:dd/MM/yyyy} בשעה: {newMeeting.StartTime}<br/>
+        משך: {newMeeting.Duration} שעות<br/>
+        חדר: {newMeeting.Room.Id}<br/>
+        ראש צוות: {teamLeader.FirstName} {teamLeader.LastName}<br/>
+        <br/>
+        בברכה,<br/>
+        מערכת ניהול פגישות";
+
+            EmailService emailService = new EmailService();
+            foreach (var email in emails)
+            {
+                emailService.SendRandomCodeEmail(email, subject, body);
+            }
+
             return newMeeting.Id;
         }
 
@@ -68,6 +106,25 @@ namespace BL.services
         public bool RemoveMeeting(int meetingId)
         {
             throw new NotSupportedException();
+        }
+
+        public Meeting GetEmployeeNextMeeting(int employeeId)
+        {
+            try
+            {
+                var meeting = _meeting.GetNextMeetingByEmployeeId(employeeId);
+
+                if (meeting == null)
+                    throw new Exception("No meeting found in the near future.");
+
+                return meeting;
+            }
+            catch (Exception ex)
+            {
+                // אפשר לרשום ללוג, או לזרוק חריג עסקי
+                // throw new BusinessException("בעיה בקבלת פגישה לעובד", ex);
+                throw;
+            }
         }
     }
 

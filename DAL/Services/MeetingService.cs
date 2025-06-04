@@ -21,9 +21,13 @@ namespace DAL.services
 
         public List<Room> GetRoomsByParameters(bool isBoard, bool isProjector)
         {
-            return _context.Rooms
-                   .Where(r => r.IsBoard == isBoard && r.IsProjector == isProjector)
-                   .ToList();
+            return new List<Room>();
+            //return _context.Rooms
+            //    .Where(r =>
+            //        (!isBoard || r.IsBoard) &&
+            //        (!isProjector || r.IsProjector)
+            //    )
+            //    .ToList();
         }
 
         public int GetNumOfWorkersByTeamLeaderId(int Id)
@@ -73,6 +77,34 @@ namespace DAL.services
                 return meeting;
             }
             return null;
+        }
+
+        public Meeting GetNextMeetingByEmployeeId(int employeeId)
+        {
+            try
+            {
+                var teamLeaderId = _context.Employees
+                    .Where(e => e.Id == employeeId)
+                    .Select(e => e.LeaderId)
+                    .FirstOrDefault();
+
+                if (teamLeaderId == 0)
+                    return null; // לא נמצא ראש צוות
+
+                var meeting = _context.Meetings
+                    .Where(m => m.LeaderId == teamLeaderId && m.Date >= DateTime.Now)
+                    .OrderBy(m => m.Date)
+                    .ThenBy(m => m.StartTime)
+                    .FirstOrDefault();
+
+                return meeting;
+            }
+            catch (Exception ex)
+            {
+                // כאן אפשר לרשום לוג או להשליך חריג מותאם אישית
+                // לדוג' - throw new DataAccessException("שגיאה בגישה לבסיס נתונים", ex);
+                throw;
+            }
         }
 
     }

@@ -18,7 +18,6 @@ builder.Services.AddScoped<IMeetingServiceBL, MeetingServiceBL>();
 builder.Services.AddScoped<IMeetingBL, MeetingBL>();
 builder.Services.AddScoped<MeetingService>();
 builder.Services.AddScoped<IRoomServiceBL, RoomServiceBL>();
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<EmployeeService>();
 builder.Services.AddScoped<EmailService>();
@@ -43,6 +42,7 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();בפיתוח בלבד
 app.UseCors("AllowFrontend");
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

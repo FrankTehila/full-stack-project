@@ -31,7 +31,6 @@ namespace DAL.services
             }
             return false;
         }
-
         public bool AddEmployee(IEmployee employee)
         {
             Employee employeeInDB = _context.Employees.FirstOrDefault(r => r.Id == employee.Id);
@@ -51,7 +50,6 @@ namespace DAL.services
                 throw new Exception("Invalid employee type");
             }
         }
-
         public bool RemoveEmployee(int employeeID)
         {
             Employee employeeInDB = _context.Employees.FirstOrDefault(r => r.Id == employeeID);
@@ -74,14 +72,12 @@ namespace DAL.services
             return employeeInDB;
         }
 
-
         public string GetEmailByID(int ID)
         {
             string email;
             if (IsItTeamLeader(ID))
             {
                 email = _context.TeamLeaders.FirstOrDefault(tm => tm.Id == ID).Email;
-
             }
             else
             {
@@ -93,7 +89,14 @@ namespace DAL.services
             }
             return email;
         }
-
-
+        public List<Employee> GetEmployeesByLeaderId(int leaderId)
+        {
+            var employees = _context.Employees.Where(e => e.LeaderId == leaderId).ToList();
+            if (employees == null || !employees.Any())
+            {
+                throw new Exception("No employees found for the given leader ID");
+            }
+            return employees;
+        }
     }
 }
