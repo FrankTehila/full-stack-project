@@ -19,14 +19,28 @@ namespace Server.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetAllRooms()
+        {
+            try
+            {
+                var rooms = _IRoomBL.GetAllRooms();
+                return Ok(rooms);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet("{roomId}")]
         public IActionResult GetRoom(int roomId)
         {
-
-            if (_IRoomBL.GetRoomByID(roomId) != null)
+            var room = _IRoomBL.GetRoomByID(roomId);
+            if (room != null)
             {
-                return Ok(_IRoomBL.GetRoomByID(roomId));
+                return Ok(room);
             }
-            return BadRequest();
+            return NotFound($"Room {roomId} not found.");
         }
 
         [HttpPost]

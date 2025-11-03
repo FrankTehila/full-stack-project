@@ -99,12 +99,34 @@ namespace DAL.services
 
                 return meeting;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // כאן אפשר לרשום לוג או להשליך חריג מותאם אישית
-                // לדוג' - throw new DataAccessException("שגיאה בגישה לבסיס נתונים", ex);
                 throw;
             }
+        }
+
+        public List<Meeting> GetAllMeetings()
+        {
+            return _context.Meetings.ToList();
+        }
+
+        public Meeting GetMeetingById(int id)
+        {
+            return _context.Meetings.FirstOrDefault(m => m.Id == id);
+        }
+
+        public bool UpdateMeeting(Meeting meeting)
+        {
+            var existing = _context.Meetings.FirstOrDefault(m => m.Id == meeting.Id);
+            if (existing == null) return false;
+
+            existing.Date = meeting.Date;
+            existing.StartTime = meeting.StartTime;
+            existing.Duration = meeting.Duration;
+            existing.RoomId = meeting.RoomId;
+
+            _context.SaveChanges();
+            return true;
         }
 
     }

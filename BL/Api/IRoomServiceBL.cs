@@ -12,10 +12,9 @@ namespace BL.api
     public interface IRoomServiceBL
     {
         public Room GetRoomByID(int roomId);
+        public List<Room> GetAllRooms();
         public bool AddRoom(IRoomBL room);
         public bool RemoveRoom(int roomID);
         public bool UpdateRoom(int roomId, RoomBL updatedRoom);
-
-
     }
 }

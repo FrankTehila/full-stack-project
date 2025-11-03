@@ -11,7 +11,7 @@ namespace BL.services
             Console.WriteLine($"--------------------------- שליחת מייל ---------------------------");
 
             // כתובת השולח
-            var fromAddress = new MailAddress("rg944262@gmail.com", "The Office");
+            var fromAddress = new MailAddress("tf734169@gmail.com", "The Office");
             var toAddress = new MailAddress(email);
 
             // קריאת הסיסמה מתוך משתנה סביבה (מאובטח יותר)

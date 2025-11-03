@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import api from '../api/axiosConfig';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserKind } from '../store/proxy';
 import Navigation from '../navigation/Navigation';
@@ -31,15 +32,18 @@ const LogIn = () => {
         }
 
         try {
-            const response = await axios.post('https://localhost:7065/api/Login', { Id: parseInt(id) });
-            localStorage.setItem('token', response.data.token);
-
+            const response = await api.post('/Login', { Id: parseInt(id) });
+            
             dispatch(setUserKind(response.data.userKind));
             setLoading(false);
+            
             if (response.data.userKind === 0) {
+                // עובד רגיל - קיבלנו טוקן ישירות
+                localStorage.setItem('token', response.data.token);
                 setIsLoggedIn(true);
                 setInfoMessage('');
             } else {
+                // ראש צוות - קוד נשלח למייל
                 setInfoMessage("A login code was sent to your email.");
                 setErrorMessage('');
             }
@@ -60,11 +64,25 @@ const LogIn = () => {
         e.preventDefault();
         setLoading(true);
         setErrorMessage('');
-        if (password == userKind) {
-            setIsLoggedIn(true);
-        } else {
+
+        try {
+            // שולח את הקוד לאימות בשרת
+            const response = await api.post('/Login/verify', {
+                Id: parseInt(id),
+                Code: parseInt(password)
+            });
+
+            // אימות הצליח - שומר את הטוקן ומתחבר
+            localStorage.setItem('token', response.data.token);
             setLoading(false);
-            setErrorMessage("The code you entered is incorrect!");
+            setIsLoggedIn(true);
+        } catch (error) {
+            setLoading(false);
+            if (error.response && error.response.status === 401) {
+                setErrorMessage("The code you entered is incorrect or expired!");
+            } else {
+                setErrorMessage(error.response?.data?.message || "Verification failed");
+            }
         }
     };
 

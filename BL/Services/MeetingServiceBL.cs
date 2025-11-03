@@ -105,7 +105,49 @@ namespace BL.services
         // }
         public bool RemoveMeeting(int meetingId)
         {
-            throw new NotSupportedException();
+            return _meeting.RemoveMeeting(meetingId);
+        }
+
+        public List<IMeetingBL> GetAllMeetings()
+        {
+            var meetings = _meeting.GetAllMeetings();
+            return meetings.Select(m => new MeetingBL
+            {
+                Id = m.Id,
+                RoomId = m.RoomId,
+                Date = m.Date,
+                StartTime = m.StartTime,
+                Duration = m.Duration,
+                LeaderId = m.LeaderId
+            } as IMeetingBL).ToList();
+        }
+
+        public IMeetingBL GetMeetingById(int id)
+        {
+            var meeting = _meeting.GetMeetingById(id);
+            if (meeting == null) return null;
+
+            return new MeetingBL
+            {
+                Id = meeting.Id,
+                RoomId = meeting.RoomId,
+                Date = meeting.Date,
+                StartTime = meeting.StartTime,
+                Duration = meeting.Duration,
+                LeaderId = meeting.LeaderId
+            };
+        }
+
+        public bool UpdateMeeting(int id, IMeetingBL meetingBL)
+        {
+            var existingMeeting = _meeting.GetMeetingById(id);
+            if (existingMeeting == null) return false;
+
+            existingMeeting.Date = meetingBL.Date;
+            existingMeeting.StartTime = meetingBL.StartTime;
+            existingMeeting.Duration = meetingBL.Duration;
+
+            return _meeting.UpdateMeeting(existingMeeting);
         }
 
         public Meeting GetEmployeeNextMeeting(int employeeId)
@@ -121,8 +163,6 @@ namespace BL.services
             }
             catch (Exception ex)
             {
-                // אפשר לרשום ללוג, או לזרוק חריג עסקי
-                // throw new BusinessException("בעיה בקבלת פגישה לעובד", ex);
                 throw;
             }
         }

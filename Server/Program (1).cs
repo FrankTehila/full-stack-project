@@ -4,6 +4,10 @@ using BL.services;
 using DAL.api;
 using DAL.models;
 using DAL.services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +15,33 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<dbClass>();
+// הגדרת JWT Authentication
+var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+var secretKey = jwtSettings["SecretKey"] ?? throw new InvalidOperationException("JWT SecretKey is missing");
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtSettings["Issuer"],
+        ValidAudience = jwtSettings["Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+    };
+});
+
+// הגדרת DbContext עם Connection String מתוך Configuration
+builder.Services.AddDbContext<dbClass>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeServiceBL, EmployeeServiceBL>();
 builder.Services.AddScoped<IMeetingServiceBL, MeetingServiceBL>();
@@ -22,8 +52,10 @@ builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<EmployeeService>();
 builder.Services.AddScoped<EmailService>();
 builder.Services.AddScoped<TeamLeaderService>();
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddSingleton<VerificationCodeService>(); // Singleton כדי לשמור קודים בזיכרון
 
-// ����� CORS
+// ����� CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
@@ -40,7 +72,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();������ ����
+//app.UseHttpsRedirection();������ ����
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();

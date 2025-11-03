@@ -10,5 +10,8 @@ namespace BL.api
     {
         public int AddMeeting(IMeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId);
         public bool RemoveMeeting(int meetingId);
+        public List<IMeetingBL> GetAllMeetings();
+        public IMeetingBL GetMeetingById(int id);
+        public bool UpdateMeeting(int id, IMeetingBL meetingBL);
     }
 }

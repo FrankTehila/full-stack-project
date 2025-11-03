@@ -27,9 +27,14 @@ public partial class dbClass : DbContext
     public virtual DbSet<TeamLeader> TeamLeaders { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectModels;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
-
+    {
+        // Connection String מוגדר כעת ב-Program.cs דרך Dependency Injection
+        // אין צורך להגדיר כאן אלא אם זה בדיקות יחידה
+        if (!optionsBuilder.IsConfigured)
+        {
+            // זה יופעל רק אם לא הוזרק DbContext דרך DI (לדוגמה, בטסטים)
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -58,6 +58,11 @@ namespace DAL.services
             return room;
         }
 
+        public List<Room> GetAllRooms()
+        {
+            return _context.Rooms.ToList();
+        }
+
         public bool UpdateRoom(Room room)
         {
             var existingRoom = _context.Rooms.FirstOrDefault(r => r.Id == room.Id);

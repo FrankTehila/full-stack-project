@@ -23,14 +23,14 @@ namespace Server.Controllers
         [HttpPost("Add")]
         public IActionResult AddMeeting([FromBody] MeetingBL meetingBL, bool isBoard, bool isProjector, int leaderId)
         {
-            // ùìåó îäèå÷ï àú ä-userKind
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½-userKind
             var userKindClaim = User.Claims.FirstOrDefault(c => c.Type == "userKind");
             if (userKindClaim == null || userKindClaim.Value == "0")
             {
-                return Forbid("ø÷ øàù öååú îåøùä ìäåñéó ôâéùä");
+                return Forbid("ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
             }
 
-            // àôùø âí ìùìåó àú ä-id ùì øàù äöååú îäèå÷ï àí øåöéí åìà îä÷ìééğè
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½-id ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             // var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
 
             int roomNum = meetingServiceBL.AddMeeting(meetingBL, isBoard, isProjector, leaderId);
@@ -41,27 +41,85 @@ namespace Server.Controllers
         }
 
 
-        [HttpDelete]
-        public IActionResult Delete([FromBody] string id)
+        [HttpDelete("{id}")]
+        [Authorize]
+        public IActionResult Delete(int id)
         {
-            if (int.TryParse(id, out int intId))
+            var userKindClaim = User.Claims.FirstOrDefault(c => c.Type == "userKind");
+            if (userKindClaim == null || userKindClaim.Value == "0")
             {
-                if (meetingServiceBL.RemoveMeeting(intId))
-                {
-                    return Ok($"The meeting deleted successfully.");
-                }
-                else
-                {
-                    return BadRequest("No suitable meeting was found for deletion.");
-                }
+                return Forbid("××™×Ÿ ×œ×š ×”×¨×©××” ×œ××—×•×§ ×¤×’×™×©×•×ª");
+            }
+
+            if (meetingServiceBL.RemoveMeeting(id))
+            {
+                return Ok($"The meeting deleted successfully.");
             }
             else
             {
-                return BadRequest("Invalid ID format. ID must be an integer.");
+                return BadRequest("No suitable meeting was found for deletion.");
             }
         }
 
-        //[HttpGet(${id})]
+        [HttpGet]
+        public IActionResult GetAllMeetings()
+        {
+            try
+            {
+                var meetings = meetingServiceBL.GetAllMeetings();
+                return Ok(meetings);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetMeetingById(int id)
+        {
+            try
+            {
+                var meeting = meetingServiceBL.GetMeetingById(id);
+                if (meeting == null)
+                {
+                    return NotFound($"Meeting with ID {id} not found.");
+                }
+                return Ok(meeting);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}")]
+        [Authorize]
+        public IActionResult UpdateMeeting(int id, [FromBody] MeetingBL meetingBL)
+        {
+            var userKindClaim = User.Claims.FirstOrDefault(c => c.Type == "userKind");
+            if (userKindClaim == null || userKindClaim.Value == "0")
+            {
+                return Forbid("××™×Ÿ ×œ×š ×”×¨×©××” ×œ×¢×“×›×Ÿ ×¤×’×™×©×•×ª");
+            }
+
+            try
+            {
+                bool updated = meetingServiceBL.UpdateMeeting(id, meetingBL);
+                if (updated)
+                {
+                    return Ok("Meeting updated successfully.");
+                }
+                else
+                {
+                    return NotFound($"Meeting with ID {id} not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
 
     }
 }

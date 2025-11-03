@@ -15,11 +15,15 @@ namespace BL.services
         EmployeeService employeeService;
         EmailService emailService;
         TeamLeaderService teamLeaderService;
-        public EmployeeServiceBL(EmployeeService employeeService, EmailService emailService, TeamLeaderService teamLeaderService)
+        VerificationCodeService verificationCodeService;
+        
+        public EmployeeServiceBL(EmployeeService employeeService, EmailService emailService, 
+            TeamLeaderService teamLeaderService, VerificationCodeService verificationCodeService)
         {
             this.employeeService = employeeService;
             this.emailService = emailService;
             this.teamLeaderService = teamLeaderService;
+            this.verificationCodeService = verificationCodeService;
         }
 
 
@@ -33,12 +37,16 @@ namespace BL.services
                     /// יצירת מספר רנדומלי בן 6 ספרות
                     Random random = new Random();
                     int randomCode = random.Next(100000, 999999);
+                    
+                    // שומר את הקוד לאימות מאוחר יותר
+                    verificationCodeService.SaveCode(ID, randomCode);
+                    
                     string recipientEmail = GetEmailByID(ID);
                     string subject = "Your code to enter the system";
                     string body = $"Your code is: {randomCode}";
 
                     emailService.SendRandomCodeEmail(recipientEmail, subject, body);
-                    return randomCode;
+                    return 1; // מחזיר 1 לציין שזה ראש צוות (לא את הקוד!)
                 }
                 return 0;
             }

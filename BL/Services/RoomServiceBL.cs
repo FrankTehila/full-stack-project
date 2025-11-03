@@ -59,6 +59,11 @@ namespace BL.services
             return _roomDAL.RemoveRoom(roomID);
         }
 
+        public List<Room> GetAllRooms()
+        {
+            return _roomDAL.GetAllRooms();
+        }
+
         public bool UpdateRoom(int roomId, RoomBL updatedRoom)
         {
             var existingRoom = _roomDAL.GetRoomByID(roomId);
