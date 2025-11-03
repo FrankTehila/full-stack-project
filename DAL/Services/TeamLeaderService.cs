@@ -33,33 +33,49 @@ namespace DAL.services
 
         public bool AddTeamLeader(ITeamLeader teamLeader)
         {
+            Console.WriteLine($"🔍 [DAL] AddTeamLeader נקרא עבור ID: {teamLeader.Id}");
+            
             TeamLeader teamLeaderInBD = _context.TeamLeaders.FirstOrDefault(r => r.Id == teamLeader.Id);
             if (teamLeaderInBD != null)
             {
+                Console.WriteLine($"❌ [DAL] ראש צוות כבר קיים: {teamLeader.Id}");
                 throw new Exception("The teamLeader already exists");
             }
 
             if (teamLeader is TeamLeader newTeamLeader)
             {
+                Console.WriteLine($"✅ [DAL] מוסיף ראש צוות חדש: {newTeamLeader.Id}, {newTeamLeader.FirstName} {newTeamLeader.LastName}");
                 _context.TeamLeaders.Add(newTeamLeader);
-                _context.SaveChanges();
+                
+                int changesSaved = _context.SaveChanges();
+                Console.WriteLine($"✅ [DAL] SaveChanges הושלם. שורות שנשמרו: {changesSaved}");
+                
                 return true;
             }
             else
             {
+                Console.WriteLine($"❌ [DAL] טיפוס ראש צוות לא תקין");
                 throw new Exception("Invalid teamLeader type");
             }
         }
 
         public bool RemoveTeamLeader(int teamLeaderID)
         {
+            Console.WriteLine($"🔍 [DAL] RemoveTeamLeader נקרא עבור ID: {teamLeaderID}");
+            
             TeamLeader teamLeaderInDB = _context.TeamLeaders.FirstOrDefault(r => r.Id == teamLeaderID);
             if (teamLeaderInDB == null)
             {
+                Console.WriteLine($"❌ [DAL] ראש צוות לא נמצא: {teamLeaderID}");
                 throw new Exception("The teamLeader does not exist");
             }
+            
+            Console.WriteLine($"✅ [DAL] ראש צוות נמצא, מוחק: {teamLeaderID}");
             _context.TeamLeaders.Remove(teamLeaderInDB);
-            _context.SaveChanges();
+            
+            int changesSaved = _context.SaveChanges();
+            Console.WriteLine($"✅ [DAL] SaveChanges הושלם. שורות שנמחקו: {changesSaved}");
+            
             return true;
         }
 

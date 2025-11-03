@@ -12,7 +12,7 @@ const DeleteWorker = () => {
             return;
         }
         try {
-            const response = await fetch(`/api/workers/${workerId}`, {
+            const response = await fetch(`/api/Worker/${workerId}`, {
                 method: 'DELETE',
             });
             if (response.ok) {

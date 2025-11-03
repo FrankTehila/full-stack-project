@@ -47,15 +47,12 @@ public partial class dbClass : DbContext
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Email)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("email");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("firstName");
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("lastName");
             entity.Property(e => e.LeaderId).HasColumnName("leaderId");
         });
@@ -106,15 +103,12 @@ public partial class dbClass : DbContext
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Email)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("email");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("firstName");
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)
-                .IsUnicode(false)
                 .HasColumnName("lastName");
             entity.Property(e => e.NumOfWorkers).HasColumnName("numOfWorkers");
         });

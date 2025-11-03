@@ -92,14 +92,24 @@ namespace Server.Controllers
         [HttpDelete("{workerId}")]
         public IActionResult RemoveWorker(int workerId)
         {
-            if (_employeeServiceBL.RemoveWorker(workerId))
+            Console.WriteLine($"🔍 [Controller] RemoveWorker נקרא! workerId = {workerId}");
+            
+            try
             {
-                Console.WriteLine($"✅ עובד נמחק בהצלחה - ID: {workerId}");
-                return Ok($"Worker {workerId} was removed successfully.");
-            }
+                if (_employeeServiceBL.RemoveWorker(workerId))
+                {
+                    Console.WriteLine($"✅ עובד נמחק בהצלחה - ID: {workerId}");
+                    return Ok($"Worker {workerId} was removed successfully.");
+                }
 
-            Console.WriteLine($"❌ מחיקת עובד נכשלה - ID: {workerId}");
-            return BadRequest($"Worker {workerId} could not be removed.");
+                Console.WriteLine($"❌ מחיקת עובד נכשלה - ID: {workerId}");
+                return BadRequest($"Worker {workerId} could not be removed.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ [Controller] שגיאה: {ex.Message}");
+                return BadRequest($"Error: {ex.Message}");
+            }
         }
 
     }

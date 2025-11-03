@@ -87,12 +87,23 @@ namespace BL.services
 
         public bool RemoveWorker(int workerID)
         {
-            if (employeeService.IsItTeamLeader(workerID))
+            Console.WriteLine($"🔍 [BL] RemoveWorker נקרא עבור ID: {workerID}");
+            
+            try
             {
-
-                return teamLeaderService.RemoveTeamLeader(workerID);
+                if (employeeService.IsItTeamLeader(workerID))
+                {
+                    Console.WriteLine($"✅ [BL] זה ראש צוות - מנסה למחוק");
+                    return teamLeaderService.RemoveTeamLeader(workerID);
+                }
+                Console.WriteLine($"✅ [BL] זה עובד רגיל - מנסה למחוק");
+                return employeeService.RemoveEmployee(workerID);
             }
-            return employeeService.RemoveEmployee(workerID);
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ [BL] שגיאה במחיקה: {ex.Message}");
+                throw;
+            }
         }
         public IWorker GetWorkerByID(int workerID)
         {

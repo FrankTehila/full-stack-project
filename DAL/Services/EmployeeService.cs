@@ -33,23 +33,32 @@ namespace DAL.services
         }
         public bool AddEmployee(IEmployee employee)
         {
+            Console.WriteLine($"🔍 [DAL] AddEmployee נקרא עבור ID: {employee.Id}");
+
             Employee employeeInDB = _context.Employees.FirstOrDefault(r => r.Id == employee.Id);
             if (employeeInDB != null)
             {
+                Console.WriteLine($"❌ [DAL] עובד כבר קיים: {employee.Id}");
                 throw new Exception("The employee already exists");
             }
 
             if (employee is Employee newEmployee)
             {
+                Console.WriteLine($"✅ [DAL] מוסיף עובד חדש: {newEmployee.Id}, {newEmployee.FirstName} {newEmployee.LastName}");
                 _context.Employees.Add(newEmployee);
-                _context.SaveChanges();
+
+                int changesSaved = _context.SaveChanges();
+                Console.WriteLine($"✅ [DAL] SaveChanges הושלם. שורות שנשמרו: {changesSaved}");
+
                 return true;
             }
             else
             {
+                Console.WriteLine($"❌ [DAL] טיפוס עובד לא תקין");
                 throw new Exception("Invalid employee type");
             }
         }
+        
         public bool RemoveEmployee(int employeeID)
         {
             Employee employeeInDB = _context.Employees.FirstOrDefault(r => r.Id == employeeID);
